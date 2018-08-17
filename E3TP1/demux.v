@@ -21,7 +21,7 @@ wire d_in;
 wire [1:0] d_sel;
 reg d_out_0, d_out_1, d_out_2, d_out_3;
 
-always @ (d_in) begin
+always @ (d_in or d_sel) begin
   d_out_0 = 0;    //Limpio lo que estaba antes
   d_out_1 = 0;
   d_out_2 = 0;
