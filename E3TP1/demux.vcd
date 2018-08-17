@@ -1,5 +1,5 @@
 $date
-	Fri Aug 17 12:36:10 2018
+	Fri Aug 17 13:01:06 2018
 $end
 $version
 	Icarus Verilog
@@ -8,35 +8,44 @@ $timescale
 	1s
 $end
 $scope module demux_tb $end
-$var wire 4 ! data_out [3:0] $end
-$var reg 1 " data_in $end
-$var reg 2 # data_select [1:0] $end
+$var wire 1 ! o0 $end
+$var wire 1 " o1 $end
+$var wire 1 # o2 $end
+$var wire 1 $ o3 $end
+$var reg 1 % data_in $end
+$var reg 2 & data_select [1:0] $end
 $scope module e_0 $end
-$var wire 1 $ demux_in $end
-$var wire 2 % demux_select [1:0] $end
-$var reg 4 & demux_out [3:0] $end
+$var wire 1 ' d_in $end
+$var wire 2 ( d_sel [1:0] $end
+$var reg 1 ) d_out_0 $end
+$var reg 1 * d_out_1 $end
+$var reg 1 + d_out_2 $end
+$var reg 1 , d_out_3 $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
+0,
+0+
+0*
+1)
+b0 (
+1'
 b0 &
-bx %
-1$
-bx #
-1"
-b0 !
+1%
+0$
+0#
+0"
+1!
 $end
-#1
-b0 #
-b0 %
 #2
-b1 #
-b1 %
+b1 &
+b1 (
 #3
-b10 #
-b10 %
+b10 &
+b10 (
 #4
-b11 #
-b11 %
+b11 &
+b11 (
 #14
