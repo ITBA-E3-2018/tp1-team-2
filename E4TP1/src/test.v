@@ -1,0 +1,29 @@
+module test;
+
+  reg in1, in2, in3, in4;
+  wire out1, out2, out3, out4;
+
+    twosComplement testModule(in1, in2, in3, in4, out1, out2, out3, out4);
+
+
+  integer i, j, k, h;
+
+  initial begin
+    for (i = 0; i < 2; i = i + 1) begin
+      for (j = 0; j < 2; j = j + 1) begin
+        for (k = 0; k < 2; k = k + 1) begin
+            for (h = 0; h < 2; h = h + 1) begin
+            in1= i; in2 = j; in3 = k; in4 = h;
+            $display("Input values are: %b %b %b %b", in1, in2, in3, in4);
+            #1;
+            end
+        end
+      end
+    end
+    $finish;
+  end
+
+  initial begin
+    $monitor("Outs have changed! New values are: %b %b %b %b", out1, out2, out3, out4) ;
+  end
+endmodule

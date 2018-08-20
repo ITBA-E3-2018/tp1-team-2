@@ -1,4 +1,4 @@
-module twosComplement (x1,x2,x3,x4,f1,f2,f3,f4);
+module twosComplement(x1,x2,x3,x4,f1,f2,f3,f4);
     input x1, x2, x3, x4;
     output f1, f2, f3, f4;
     wire nx1,nx2,nx3,nx4;
