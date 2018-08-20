@@ -1,10 +1,10 @@
-#### IN ST I T U TOTE CN O LÓ GI CO D EBU E NO SAI R E S
+#### INSTITUTO TECNOLÓGICODE BUENOS AIRES
 
 # Trabajo Práctico de Laboratorio Nr. 1
 
-```
-Electrónica 3 - 2018
-```
+
+#Electrónica 3 - 2018
+
 Este trabajo práctico corresponde a los temas de la Unidad 1:
 
 - Códigos
@@ -26,21 +26,22 @@ los ejemplos vistos en clase.
 los ejemplos vistos en clase.
 
 
-## EJ E RCI C I O 1
+##EJERCICIO 1
 
 Dada una cierta convención de números en punto fijo (Signado, Cant. bits de parte entera, Cant. bits de
 parte fraccionaria), escribir un programa que acepte estos tres parámetros por línea de comando en forma
 
 ### numérica e imprima resolución y rango de la convención elegida. ImprimirERRORante entradas no válidas.
 
-```
 Ejemplo:
+
 ```
-### run 0 1 1
+run 0 1 1
 
-### Res: 0.5 | Ran: 1.
+Res: 0.5 | Ran: 1.
+```
 
-## EJ E RCI C I O 2
+## EJERCICIO 2
 
 Dada la siguiente expresión en maxtérminos:
 
@@ -53,14 +54,14 @@ f ( d , c , b , a )=∏( M 0 , M 1 , M 5 , M 7 , M 8 , M 10 , M 14 , M 15 )
 - Dibuje el circuito nuevamente utilizando únicamente compuertas NAND (grupos pares) o NOR (grupos
     impares).
 
-## EJ E RCI C I O 3
+## EJERCICIO 3
 
 Implemente los siguientes módulos en Verilog.
 
 - Grupos pares: ENCODER de 4 entradas. DEMUX de 4 salidas.
 - Grupos impares: DECODER de 4 salidas. MUX de 4 entradas.
 
-## EJ E RCI C I O 4
+## EJERCICIO 4
 
 Se desea realizar un circuito que convierta un número binario de 4 bits en su complemento a dos.
 
@@ -69,14 +70,14 @@ Se desea realizar un circuito que convierta un número binario de 4 bits en su c
 - Dibuje el circuito lógico resultante utilizando compuertas AND, OR, NOT.
 - Implemente el circuito resultante en Verilog.
 
-## EJ E RCI C I O 5
+## EJERCICIO 5
 
 Implemente en Verilog un sumador de dos números de un dígito en formato BCD expresados a la salida como
 un número de dos dígitos en formato BCD. Respalde sus decisiones y proceso de diseño con las herramientas
 y técnicas vistas en la materia, de tal manera que esto se vea adecuadamente plasmado en el informe.
 
 
-## EJ E RCI C I O 6
+## EJERCICIO 6
 
 Implemente en Verilog una ALU de 4 bits.
 
