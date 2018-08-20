@@ -3,7 +3,7 @@
 # Trabajo Práctico de Laboratorio Nr. 1
 
 
-#Electrónica 3 - 2018
+# Electrónica 3 - 2018
 
 Este trabajo práctico corresponde a los temas de la Unidad 1:
 
@@ -26,7 +26,7 @@ los ejemplos vistos en clase.
 los ejemplos vistos en clase.
 
 
-##EJERCICIO 1
+## EJERCICIO 1
 
 Dada una cierta convención de números en punto fijo (Signado, Cant. bits de parte entera, Cant. bits de
 parte fraccionaria), escribir un programa que acepte estos tres parámetros por línea de comando en forma
