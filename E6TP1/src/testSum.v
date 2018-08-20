@@ -18,7 +18,7 @@ module testSum;
       end
     end
 
-    integer a, s,d, f;
+    integer a, s, d, f;
 
     for (a = 0; a < 2; a = a + 1) begin
       for (s = 0; s < 2; s = s + 1) begin
