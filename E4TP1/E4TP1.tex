@@ -1,0 +1,124 @@
+%% LyX 2.2.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=3cm,rmargin=3cm,headheight=3cm,headsep=3cm}
+\usepackage{float}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+
+\title{Electrónica III TP1}
+\maketitle
+
+\section{Ejercicio 4}
+
+\begin{figure}[H]
+\begin{centering}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline 
+$x_{1}$ & $x_{2}$ & $x_{3}$ & $x_{4}$ & $f_{1}$ & $f_{2}$ & $f_{3}$ & $f_{4}$\tabularnewline
+\hline 
+\hline 
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\tabularnewline
+\hline 
+0 & 0 & 0 & 1 & 1 & 1 & 1 & 1\tabularnewline
+\hline 
+0 & 0 & 1 & 0 & 1 & 1 & 1 & 0\tabularnewline
+\hline 
+0 & 0 & 1 & 1 & 1 & 1 & 0 & 1\tabularnewline
+\hline 
+0 & 1 & 0 & 0 & 1 & 1 & 0 & 0\tabularnewline
+\hline 
+0 & 1 & 0 & 1 & 1 & 0 & 1 & 1\tabularnewline
+\hline 
+0 & 1 & 1 & 0 & 1 & 0 & 1 & 0\tabularnewline
+\hline 
+0 & 1 & 1 & 1 & 1 & 0 & 0 & 1\tabularnewline
+\hline 
+1 & 0 & 0 & 0 & 1 & 0 & 0 & 0\tabularnewline
+\hline 
+1 & 0 & 0 & 1 & 0 & 1 & 1 & 1\tabularnewline
+\hline 
+1 & 0 & 1 & 0 & 0 & 1 & 1 & 0\tabularnewline
+\hline 
+1 & 0 & 1 & 1 & 0 & 1 & 0 & 1\tabularnewline
+\hline 
+1 & 1 & 0 & 0 & 0 & 1 & 0 & 0\tabularnewline
+\hline 
+1 & 1 & 0 & 1 & 0 & 0 & 1 & 1\tabularnewline
+\hline 
+1 & 1 & 1 & 0 & 0 & 0 & 1 & 0\tabularnewline
+\hline 
+1 & 1 & 1 & 1 & 0 & 0 & 0 & 1\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+\caption{Complemento a 2 de los bits de entrada}
+\end{figure}
+
+Si escribimos cada bit de salida en función de los mintérminos de
+los bits de entrada, nos quedan las siguientes ecuaciónes:
+\begin{center}
+$f_{1}(m_{i})=m_{1}+m_{2}+m_{3}+m_{4}+m_{5}+m_{6}+m_{7}+m_{8}$
+\par\end{center}
+
+\begin{center}
+$f_{2}(m_{i})=m_{1}+m_{2}+m_{3}+m_{4}+m_{9}+m_{10}+m_{11}+m_{12}$
+\par\end{center}
+
+\begin{center}
+$f_{3}(m_{i})=m_{1}+m_{2}+m_{5}+m_{6}+m_{9}+m_{10}+m_{13}+m_{14}$
+\par\end{center}
+
+\begin{center}
+$f_{4}(m_{i})=m_{0}+m_{1}+m_{3}+m_{5}+m_{7}+m_{9}+m_{11}+m_{13}+m_{15}$
+\par\end{center}
+
+Remplazando los valores de cada mintermino, quedan las siguientes
+formulas:
+\begin{center}
+$f_{1}(x_{1};x_{2};x_{3};x_{4})=\bar{x_{1}}\bar{x_{2}}\bar{x_{3}}x_{4}+\bar{x_{1}}\bar{x_{2}}x_{3}\bar{x_{4}}+\bar{x_{1}}\bar{x_{2}}x_{3}x_{4}+\bar{x_{1}}x_{2}\bar{x_{3}}\bar{x_{4}}+\bar{x_{1}}x_{2}\bar{x_{3}}x_{4}+\bar{x_{1}}x_{2}x_{3}\bar{x_{4}}+\bar{x_{1}}x_{2}x_{3}x_{4}+x_{1}\bar{x_{2}}\bar{x_{3}}\bar{x_{4}}$
+\par\end{center}
+
+\begin{center}
+$f_{2}(x_{1};x_{2};x_{3};x_{4})=\bar{x_{1}}\bar{x_{2}}\bar{x_{3}}x_{4}+\bar{x_{1}}\bar{x_{2}}x_{3}\bar{x_{4}}+\bar{x_{1}}\bar{x_{2}}x_{3}x_{4}+\bar{x_{1}}x_{2}\bar{x_{3}}\bar{x_{4}}+x_{1}\bar{x_{2}}\bar{x_{3}}x_{4}+x_{1}\bar{x_{2}}x_{3}\bar{x_{4}}+x_{1}\bar{x_{2}}x_{3}x_{4}+x_{1}x_{2}\bar{x_{3}}\bar{x_{4}}$
+\par\end{center}
+
+\begin{center}
+$f_{3}(x_{1};x_{2};x_{3};x_{4})=\bar{x_{1}}\bar{x_{2}}\bar{x_{3}}x_{4}+\bar{x_{1}}\bar{x_{2}}x_{3}\bar{x_{4}}+\bar{x_{1}}x_{2}\bar{x_{3}}x_{4}+\bar{x_{1}}x_{2}x_{3}\bar{x_{4}}+x_{1}\bar{x_{2}}\bar{x_{3}}x_{4}+x_{1}\bar{x_{2}}x_{3}\bar{x_{4}}+x_{1}x_{2}\bar{x_{3}}x_{4}+x_{1}x_{2}x_{3}\bar{x_{4}}$
+\par\end{center}
+
+\begin{center}
+$f_{4}(x_{1};x_{2};x_{3};x_{4})=\bar{x_{1}}\bar{x_{2}}\bar{x_{3}}\bar{x_{4}}+\bar{x_{1}}\bar{x_{2}}\bar{x_{3}}x_{4}+\bar{x_{1}}\bar{x_{2}}x_{3}x_{4}+\bar{x_{1}}x_{2}\bar{x_{3}}x_{4}+\bar{x_{1}}x_{2}x_{3}x_{4}+x_{1}\bar{x_{2}}\bar{x_{3}}x_{4}+x_{1}\bar{x_{2}}x_{3}x_{4}+x_{1}x_{2}\bar{x_{3}}x_{4}+x_{1}x_{2}x_{3}x_{4}$
+\par\end{center}
+
+Si simplificamos cada ecuación, se puede llegar a las siguientes expresiones:
+\begin{center}
+$f_{1}(x_{1};x_{2};x_{3};x_{4})=x_{1}\bar{x_{2}}\bar{x_{3}}\bar{x_{4}}+\bar{x_{1}}(x_{2}+x_{3}+x_{4})$
+\par\end{center}
+
+\begin{center}
+$f_{2}(x_{1};x_{2};x_{3};x_{4})=x_{2}\bar{x_{3}}\bar{x_{4}}+\bar{x_{2}}(x_{3}+x_{4})$
+\par\end{center}
+
+\begin{center}
+$f_{3}(x_{1};x_{2};x_{3};x_{4})=x_{3}\bar{x_{4}}+\bar{x_{3}}x_{4}$
+\par\end{center}
+
+\begin{center}
+$f_{4}(x_{1};x_{2};x_{3};x_{4})=x_{4}+\bar{x_{1}}\bar{x_{2}}\bar{x_{3}}$
+\par\end{center}
+
+
+\end{document}
