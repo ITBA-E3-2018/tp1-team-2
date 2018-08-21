@@ -5,7 +5,14 @@
 \usepackage[latin9]{inputenc}
 \usepackage{geometry}
 \geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=3cm,rmargin=3cm,headheight=3cm,headsep=3cm}
-\usepackage{float}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{babel}
+
+
+\makeatother
+
 \usepackage{babel}
 \begin{document}
 
@@ -20,17 +27,25 @@ de 3 bits. Esta decisión simplificó mucho el desarollo del modulo
 de suma de la ALU de 4 bits, ya que como se puede ver en el código
 ``sum.v'' encontrado en la carpeta src, se puede ver comentado dentro
 del código como fue nuestro desarrollo sin la función sum3Bits y como
-quedo finalmente el código con la implementacion de sum3Bits.
+quedo finalmente el código con la implementacion de sum3Bits. 
 \par\end{flushleft}
 
 \noindent \begin{flushleft}
 Para el caso de la resta se decidió utilizar el modulo hecho en el
 ejercicio 4 del complemento a 2 y así, se utilizó en conjunto ese
-modulo con el modulo suma.
+modulo con el modulo suma. 
 \par\end{flushleft}
 
 \noindent \begin{flushleft}
 En el caso de las operaciones AND, OR, NOT y XOR, se opto por utilizar
-las funciones predefinidas por verilog y reutilizarlas bit a bit.
+las funciones predefinidas por verilog y reutilizarlas bit a bit. 
 \par\end{flushleft}
+
+\subsection{Definiciones}
+
+Para la suma, se definio un bit extra llamado carry que justamente
+se enciende en caso de que la suma se pase del rango máximo representable
+por cuatro bits. Por otro lado, en el caso del Shift left, se definio
+que se ingresa un 0 al bit menos significativo del nibble en cuestión
+y el bit más significativo previo al shift, se devuelve como carry.
 \end{document}
