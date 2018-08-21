@@ -50,6 +50,7 @@ module testALU;
 
     initial begin
         $monitor("AccA: %b %b %b %b; AccB: %b %b %b %b /Op: %b %b %b / Outs: %b %b %b %b  Carry %b",
-        x0,x1,x2,x3,y0,y1,y2,y3,op0,op1,op2,out0,out1,out2,out3,carry); 
+        x0,x1,x2,x3,y0,y1,y2,y3,op0,op1,op2,out0,out1,out2,out3,carry);
+        $display("Si se desea cambiar los parametros de entrada (Acumuladores y operaciones), dirigirse a ../src/testALU.v y modificar los valores en el codigo");
     end
 endmodule
