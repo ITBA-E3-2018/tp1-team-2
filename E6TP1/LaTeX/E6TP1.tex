@@ -5,11 +5,22 @@
 \usepackage[latin9]{inputenc}
 \usepackage{geometry}
 \geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=3cm,rmargin=3cm,headheight=3cm,headsep=3cm}
+\usepackage{float}
 
 \makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
 \usepackage{babel}
 
+
+
+
+
+\usepackage{babel}
 
 \makeatother
 
@@ -43,9 +54,66 @@ las funciones predefinidas por verilog y reutilizarlas bit a bit.
 
 \subsection{Definiciones}
 
-Para la suma, se definio un bit extra llamado carry que justamente
-se enciende en caso de que la suma se pase del rango máximo representable
-por cuatro bits. Por otro lado, en el caso del Shift left, se definio
-que se ingresa un 0 al bit menos significativo del nibble en cuestión
-y el bit más significativo previo al shift, se devuelve como carry.
+Esta unidad aritmetica lógica se implemento con 2 acumuladores (que
+llamaremos A y B en este orden) de 4 bits cada uno, tres bits de operaciones,
+4 bits del acumulador de salida (que llamaremos Acumulador C) y un
+bit de carry, ordenados en el orden en que fueron mencionados. Para
+seleccionar que operacion se desea hacer, se deben encender los 3
+bits de operaciones de la siguiente manera:
+
+\begin{table}[H]
+\begin{centering}
+\begin{tabular}{|c|c|c|c|}
+\hline 
+ & Bit 0 & Bit 1 & Bit 2\tabularnewline
+\hline 
+\hline 
+AND & 0 & 0 & 0\tabularnewline
+\hline 
+NOT & 0 & 0 & 1\tabularnewline
+\hline 
+OR & 0 & 1 & 0\tabularnewline
+\hline 
+XOR & 0 & 1 & 1\tabularnewline
+\hline 
+SHIFT LEFT & 1 & 0 & 0\tabularnewline
+\hline 
+SUM & 1 & 0 & 1\tabularnewline
+\hline 
+SUBSTRACTION & 1 & 1 & 0\tabularnewline
+\hline 
+TWO'S COMPLEMENT & 1 & 1 & 1\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+\caption{Representacion de operaciones en los bits.}
+\end{table}
+\begin{itemize}
+\item AND: Realiza una operacion AND bit a bit entre acumuladores A y B
+y la devuelve en el acumulador C, a su vez, el carry se devuelve en
+cero.
+\item NOT: Realiza una operacion logica NOT bit a bit del acumulador A y
+devuelve la respuesta en el acumulador C, a su vez, el carry queda
+en cero.
+\item OR: Realiza una operacion OR bit a bit entre acumuladores A y B y
+la devuelve en el acumulador C, a su vez, el carry se devuelve en
+cero.
+\item XOR: Realiza una operacion XOR bit a bit entre acumuladores A y B
+y la devuelve en el acumulador C, a su vez, el carry se devuelve en
+cero.
+\item SHIFT LEFT: Se encarga de mover cada bit del acumulador A un espacio
+a la derecha e inserta un cero al bit menos significativo, la respuesta
+la devuelve en el acumulador C y el carry valdra 0 o 1 dependiendo
+del bit mas significativo de A
+\item SUM: Se encarga de hacer una suma numerica de los valores decimales
+de los acumuladores A y B y devuelve el resultado (en codigo binario)
+en el acumulador C. Dependiendo si es representable el resultado de
+la suma en un nibble se encendera o no el bit Carry.
+\item SUBSTRACTION: Se encarga de hacer una resta numerica de los valores
+decimales de los acumuladores A y B y devuelve el resultado (en codigo
+binario) en el acumulador C. El carry se devuelve en 1.
+\item TWO'S COMPLEMENT: Se encarga de hacer el complemento a 2 del acumulador
+A y devuelve el resultado en el acumulador C.
+\end{itemize}
+
 \end{document}
