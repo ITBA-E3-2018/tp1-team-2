@@ -1,0 +1,36 @@
+%% LyX 2.2.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=3cm,rmargin=3cm,headheight=3cm,headsep=3cm}
+\usepackage{float}
+\usepackage{babel}
+\begin{document}
+
+\section{Ejercicio 6: Implementación de una ALU}
+\noindent \begin{flushleft}
+Para este ejercicio se pidió implementar una ALU de 4 bits con las
+operaciones SUMA, RESTA, AND, OR, NOT, XOR, Complemento a dos y Shift
+Left. Para esto se decidió crear un modulo encargado de sumar 2 bits,
+este a su vez devuelve un bit de respuesta y un bit de carry. Utilizando
+ese modulo, se procedió a hacer un nuevo modulo que haga una suma
+de 3 bits. Esta decisión simplificó mucho el desarollo del modulo
+de suma de la ALU de 4 bits, ya que como se puede ver en el código
+``sum.v'' encontrado en la carpeta src, se puede ver comentado dentro
+del código como fue nuestro desarrollo sin la función sum3Bits y como
+quedo finalmente el código con la implementacion de sum3Bits.
+\par\end{flushleft}
+
+\noindent \begin{flushleft}
+Para el caso de la resta se decidió utilizar el modulo hecho en el
+ejercicio 4 del complemento a 2 y así, se utilizó en conjunto ese
+modulo con el modulo suma.
+\par\end{flushleft}
+
+\noindent \begin{flushleft}
+En el caso de las operaciones AND, OR, NOT y XOR, se opto por utilizar
+las funciones predefinidas por verilog y reutilizarlas bit a bit.
+\par\end{flushleft}
+\end{document}
