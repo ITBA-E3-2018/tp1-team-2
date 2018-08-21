@@ -4,6 +4,8 @@ module testSum;
     wire o0,o1,o2,o3;
 
     andBitwise testModule(x0,x1,x2,x3,y0,y1,y2,y3,o0,o1,o2,o3);
+    //orBitwise testMOdule(x0,x1,x2,x3,y0,y1,y2,y3,o0,o1,o2,o3);
+    //xorBitwise testMOdule(x0,x1,x2,x3,y0,y1,y2,y3,o0,o1,o2,o3);
     integer i, j, k, h;
     integer a, s, d, f;
 
