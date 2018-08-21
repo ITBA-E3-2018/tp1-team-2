@@ -8,8 +8,8 @@ module testALU;
     ALU testModule(x0,x1,x2,x3,y0,y1,y2,y3,op0,op1,op2,out0, out1, out2, out3, carry);
 
     initial begin
-        x0 = 1 ; x1 = 0; x2 = 1; x3 = 1;//INICIALIZACION DEL PRIMER NIBBLE, HARCODEAR PARA PROBAR
-        y0 = 0 ; y1 = 0; y2 = 1; y3 = 0;
+        x0 = 1 ; x1 = 1; x2 = 1; x3 = 1;//INICIALIZACION DEL PRIMER NIBBLE, HARCODEAR PARA PROBAR
+        y0 = 1 ; y1 = 1; y2 = 1; y3 = 0;
 
         //DEPENDIENDO QUE OPERACIONES SE QUIERA TESTEAR, COMENTAR LAS DEMAS OPERACIONES
         
