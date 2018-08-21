@@ -45,6 +45,6 @@ module sum (x0,x1,x2,x3,y0,y1,y2,y3,o0,o1,o2,o3,carry);
     else if (carryB == 1)
         assign carry = 1;
     else
-        assign carry = 0;          //Me fijo si alguno de los carrys quedo encendido, y si es asi, enciendo el bit del carry
+        assign carry = 0;       //Me fijo si alguno de los carrys quedo encendido, y si es asi, enciendo el bit del carry
 
 endmodule

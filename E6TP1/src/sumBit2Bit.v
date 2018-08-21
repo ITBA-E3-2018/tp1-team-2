@@ -18,3 +18,4 @@ module sumBit2Bit(x1, x2, o0, o1);
 		end
 	end
 endmodule
+//works perfectly
