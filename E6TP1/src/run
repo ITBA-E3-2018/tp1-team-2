@@ -1,0 +1,3 @@
+#!/bin/bash
+
+iverilog testALU.v ALU.v andBitwise.v notBitwise.v orBitwise.v shiftLeft.v Substraction.v Sum.v Sum3Bit.v sumBit2Bit.v twosComplement.v xorBitwise.v
