@@ -21,7 +21,7 @@ module sum (x0,x1,x2,x3,y0,y1,y2,y3,o0,o1,o2,o3,carry);
     
 always @* begin
     assign o3 = w;                     //Sumo bits X3 y Y3, el output es w y el carry es c3
-    assign o2 = c3;                  //Sumo X2, Y2 y C3 y me quedan 2 posibles carrys c2a y c2b
+    assign o2 = temp;                  //Sumo X2, Y2 y C3 y me quedan 2 posibles carrys c2a y c2b
     if (c2a == 0) 
         assign o1 = m1;
     else
