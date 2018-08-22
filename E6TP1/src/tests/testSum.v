@@ -1,8 +1,9 @@
 module testSum;
+    
     reg x0,x1,x2,x3,y0,y1,y2,y3;
-    wire o0,o1,o2,o3,o4;
+    wire o0,o1,o2,o3,carry;
 
-    sum testModule(x0,x1,x2,x3,y0,y1,y2,y3,o0,o1,o2,o3,o4);
+    sum testModule(x0,x1,x2,x3,y0,y1,y2,y3,o0,o1,o2,o3,carry);
     integer i, j, k, h;
     integer a, s, d, f;
 
@@ -35,7 +36,7 @@ module testSum;
   end
 
     initial begin
-        $monitor("Outs have changed! New values are: %b %b %b %b  Carry: %b", o0, o1, o2, o3, o4) ;
+        $monitor("Outs have changed! New values are: %b %b %b %b  Carry: %b", o0, o1, o2, o3, carry) ;
         //$monitor("Carry: %b", o4) ;
     end
 endmodule

@@ -30,8 +30,9 @@ los ejemplos vistos en clase.
 
 Dada una cierta convención de números en punto fijo (Signado, Cant. bits de parte entera, Cant. bits de
 parte fraccionaria), escribir un programa que acepte estos tres parámetros por línea de comando en forma
+numérica e imprima resolución y rango de la convención elegida. 
 
-### numérica e imprima resolución y rango de la convención elegida. ImprimirERRORante entradas no válidas.
+###Imprimir ERROR ante entradas no válidas.
 
 Ejemplo:
 
