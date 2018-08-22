@@ -2,29 +2,36 @@
 
 module decoderBCD_tb;
 
-reg [3:0] in;
+//Defining test variables
+reg [4:0] in;
 reg [4:0] i;
-wire [9:0] out;
+wire [3:0] out0;
+wire [3:0] out1;
 
-decoderBCD dec_udt(.in(in), .out(out));
+//Connecting the ports
+decoderBCD dec_udt(.in(in), .out0(out0), .out1(out1));
 
-initial begin
-  in = 0;
-  $display("In\tOut");
-  $monitor("%d\t%b", in, out);
-end
-
-
-always begin
-for (i = 0; i<=15 ; i = i+1) begin
-    #1in = i;
-end
-#20$finish;
-end
-
+//Code
 initial begin
   $dumpfile("decoderBCD.vcd");
   $dumpvars;
 end
+
+initial begin
+  in = 0;
+  $display("In\tOut1\tOut0\tBCD view");
+  $monitor("%d\t%b\t%b\t%b\t%d,%d", in, in, out1, out0, out1, out0);
+end
+
+
+always begin
+for (i = 0; i<31 ; i = i+1) begin
+    #1in = i;
+end
+#1 in = 31;
+#20$finish;
+end
+
+
 
 endmodule

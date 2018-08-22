@@ -1,24 +1,32 @@
+//This BCD Decoder supports numbers of up to 5-bits
+//I'm not sure if Decoder is the proper name
+
 module decoderBCD (
-  in,
-  out
+  in,   //5-bit Input Value
+  out0, //4-bit Output BCD Digit 0
+  out1  //4-bit Output BCD Digit 1
 );
 
-input [3:0] in;
-output [9:0] out;
+//Input Declaration
+input [4:0] in;
 
-wire [3:0] in;
-reg [9:0] out;
+//Output Declaration
+output [3:0] out0;
+output [3:0] out1;
+
+//Resources Definition
+wire [4:0] in;
+reg [3:0] out0;
+reg [3:0] out1;
 
 initial begin
-  out = 0;
+  out0 = 0;
+  out1 = 0;
 end
 
-always @(in)
-if (in<10) begin
-  out = 9'b000000001 << in;
-end
-else begin
-  out = 0;
+always @(in) begin
+out1 = in/10;
+out0 = in%10;
 end
 
 endmodule
