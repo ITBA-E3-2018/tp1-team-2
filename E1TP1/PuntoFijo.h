@@ -10,16 +10,12 @@ public:
 	bool signado;
 	string parteEntera;
 	string parteFraccionaria;
-
-
 	float resolution;
 	double range;
 
 	void setParteEntera(char* secuencia);
 	void setParteFraccionaria(char*secuencia);
-
 	int toInt(string secuencia);
-
 	void setResolution();
 	void setRange();
 	double getResolution();

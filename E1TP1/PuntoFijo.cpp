@@ -4,13 +4,13 @@
 #include <math.h>
 
 
-
 void PuntoFijo::setParteEntera(char* secuencia)
 {
 	parteEntera = secuencia;
 #ifdef DEBUG
 	std::cout << "parte Entera: " << parteEntera << std::endl;
 	//std::cout << "parte Entera SIZE: " << parteEntera.size() << std::endl;
+	std::cout << "parte Entera SIZE: " << toInt(parteEntera) << std::endl;
 #endif // DEBUG
 }
 
@@ -20,8 +20,9 @@ void PuntoFijo::setParteFraccionaria(char* secuencia)
 #ifdef DEBUG
 	std::cout << "parte Fraccionaria: " << parteFraccionaria << std::endl;
 	//std::cout << "parte Fraccionaria SIZE: " << parteFraccionaria.size() << std::endl;
-	std::cout << "potencia: " << pow(2,parteFraccionaria.size()) << std::endl;
-	std::cout << "futuro resolution: " << 1.0 / pow(2,parteFraccionaria.size()) << std::endl;
+	std::cout << "parte Fraccionaria SIZE: " << toInt(parteFraccionaria) << std::endl;
+	std::cout << "potencia: " << pow(2,toInt(parteFraccionaria)) << std::endl;
+	std::cout << "futuro resolution: " << 1.0 / pow(2,toInt(parteFraccionaria)) << std::endl;
 #endif // DEBUG
 }
 
@@ -45,6 +46,8 @@ void PuntoFijo::setRange()
 	std::cout << "ENTRA a setRange" <<  std::endl;
 	//std::cout << "parte entera SIZE:" << parteEntera.size()<<std::endl;
 	//std::cout << "parte fracc SIZE: " << parteFraccionaria.size()<< std::endl;
+	std::cout << "parte entera SIZE:" << toInt(parteEntera)<<std::endl;
+	std::cout << "parte fracc SIZE: " << toInt(parteFraccionaria)<< std::endl;
 #endif // DEBUG
 
 	if (signado)
