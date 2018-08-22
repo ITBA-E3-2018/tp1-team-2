@@ -4,88 +4,101 @@
 :vpi_module "system";
 :vpi_module "v2005_math";
 :vpi_module "va_math";
-S_0x2285350 .scope module, "sum4bit_tb" "sum4bit_tb" 2 3;
+S_0x1f71af0 .scope module, "adderBCD_tb" "adderBCD_tb" 2 3;
  .timescale 0 0;
-v0x2297400_0 .var "i", 3 0;
-v0x22974c0_0 .var "in0", 3 0;
-v0x2297570_0 .var "in1", 3 0;
-v0x2297620_0 .var "j", 3 0;
-v0x22976d0_0 .net "out", 4 0, v0x2283f20_0; 1 drivers
-S_0x2285440 .scope module, "sum_udt" "sum4bit" 2 10, 3 1, S_0x2285350;
+v0x1fab660_0 .var "i", 3 0;
+v0x1fab6e0_0 .var "in0", 3 0;
+v0x1fab7b0_0 .var "in1", 3 0;
+v0x1fab880_0 .var "j", 3 0;
+v0x1fab900_0 .net "out0", 3 0, L_0x1fac060; 1 drivers
+v0x1fab9d0_0 .net "out1", 3 0, L_0x1fac280; 1 drivers
+S_0x1f950d0 .scope module, "adder_udt" "adderBCD" 2 13, 3 4, S_0x1f71af0;
  .timescale 0 0;
-v0x2283f20_0 .var "o", 4 0;
-v0x22972c0_0 .net "x0", 3 0, v0x22974c0_0; 1 drivers
-v0x2297360_0 .net "x1", 3 0, v0x2297570_0; 1 drivers
-E_0x2261c40 .event edge, v0x2297360_0, v0x22972c0_0;
-    .scope S_0x2285440;
+v0x1fab2b0_0 .net "in0", 3 0, v0x1fab6e0_0; 1 drivers
+v0x1fab350_0 .net "in1", 3 0, v0x1fab7b0_0; 1 drivers
+v0x1fab400_0 .alias "out0", 3 0, v0x1fab900_0;
+v0x1fab4b0_0 .alias "out1", 3 0, v0x1fab9d0_0;
+v0x1fab590_0 .net "sum", 4 0, L_0x1fabd40; 1 drivers
+S_0x1faad30 .scope module, "adder" "sum4bit" 3 25, 4 1, S_0x1f950d0;
+ .timescale 0 0;
+v0x1faae20_0 .net *"_s0", 4 0, L_0x1fabae0; 1 drivers
+v0x1faaee0_0 .net *"_s3", 0 0, C4<0>; 1 drivers
+v0x1faaf80_0 .net *"_s4", 4 0, L_0x1fabc10; 1 drivers
+v0x1fab020_0 .net *"_s7", 0 0, C4<0>; 1 drivers
+v0x1fab0a0_0 .alias "o", 4 0, v0x1fab590_0;
+v0x1fab150_0 .alias "x0", 3 0, v0x1fab2b0_0;
+v0x1fab210_0 .alias "x1", 3 0, v0x1fab350_0;
+L_0x1fabae0 .concat [ 4 1 0 0], v0x1fab6e0_0, C4<0>;
+L_0x1fabc10 .concat [ 4 1 0 0], v0x1fab7b0_0, C4<0>;
+L_0x1fabd40 .arith/sum 5, L_0x1fabae0, L_0x1fabc10;
+S_0x1f951c0 .scope module, "decoder" "decoderBCD" 3 26, 5 4, S_0x1f950d0;
+ .timescale 0 0;
+v0x1f952b0_0 .net *"_s0", 4 0, C4<01010>; 1 drivers
+v0x1faa920_0 .net *"_s2", 4 0, L_0x1fabf30; 1 drivers
+v0x1faa9c0_0 .net *"_s6", 4 0, C4<01010>; 1 drivers
+v0x1faaa60_0 .net *"_s8", 4 0, L_0x1fac190; 1 drivers
+v0x1faab10_0 .alias "in", 4 0, v0x1fab590_0;
+v0x1faabb0_0 .alias "out0", 3 0, v0x1fab900_0;
+v0x1faac90_0 .alias "out1", 3 0, v0x1fab9d0_0;
+L_0x1fabf30 .arith/mod 5, L_0x1fabd40, C4<01010>;
+L_0x1fac060 .part L_0x1fabf30, 0, 4;
+L_0x1fac190 .arith/div 5, L_0x1fabd40, C4<01010>;
+L_0x1fac280 .part L_0x1fac190, 0, 4;
+    .scope S_0x1f71af0;
 T_0 ;
-    %set/v v0x2283f20_0, 0, 5;
+    %vpi_call 2 18 "$dumpfile", "adderBCD.vcd";
+    %vpi_call 2 19 "$dumpvars";
     %end;
     .thread T_0;
-    .scope S_0x2285440;
+    .scope S_0x1f71af0;
 T_1 ;
-    %wait E_0x2261c40;
-    %load/v 8, v0x22972c0_0, 4;
-    %mov 12, 0, 1;
-    %load/v 13, v0x2297360_0, 4;
-    %mov 17, 0, 1;
-    %add 8, 13, 5;
-    %set/v v0x2283f20_0, 8, 5;
-    %jmp T_1;
-    .thread T_1, $push;
-    .scope S_0x2285350;
+    %set/v v0x1fab6e0_0, 0, 4;
+    %set/v v0x1fab7b0_0, 0, 4;
+    %vpi_call 2 25 "$display", "In0+\011In1=\011Out";
+    %vpi_call 2 26 "$monitor", "%d\011%d\011%d,%d", v0x1fab6e0_0, v0x1fab7b0_0, v0x1fab9d0_0, v0x1fab900_0;
+    %end;
+    .thread T_1;
+    .scope S_0x1f71af0;
 T_2 ;
-    %vpi_call 2 14 "$dumpfile", "sum4bit.vcd";
-    %vpi_call 2 15 "$dumpvars";
-    %end;
-    .thread T_2;
-    .scope S_0x2285350;
-T_3 ;
-    %set/v v0x22974c0_0, 0, 4;
-    %set/v v0x2297570_0, 0, 4;
-    %vpi_call 2 21 "$display", "In0\011+\011In1\011=\011Out";
-    %vpi_call 2 22 "$monitor", "%d\011%d\011%d", v0x22974c0_0, v0x2297570_0, v0x22976d0_0;
-    %end;
-    .thread T_3;
-    .scope S_0x2285350;
-T_4 ;
-    %set/v v0x2297400_0, 0, 4;
-T_4.0 ;
-    %load/v 8, v0x2297400_0, 4;
+    %set/v v0x1fab660_0, 0, 4;
+T_2.0 ;
+    %load/v 8, v0x1fab660_0, 4;
     %mov 12, 0, 2;
    %cmpi/u 8, 15, 6;
-    %jmp/0xz T_4.1, 5;
+    %jmp/0xz T_2.1, 5;
     %delay 1, 0;
-    %load/v 8, v0x2297400_0, 4;
-    %set/v v0x22974c0_0, 8, 4;
-    %set/v v0x2297620_0, 0, 4;
-T_4.2 ;
-    %load/v 8, v0x2297620_0, 4;
+    %load/v 8, v0x1fab660_0, 4;
+    %set/v v0x1fab6e0_0, 8, 4;
+    %set/v v0x1fab880_0, 0, 4;
+T_2.2 ;
+    %load/v 8, v0x1fab880_0, 4;
     %mov 12, 0, 2;
    %cmpi/u 8, 15, 6;
-    %jmp/0xz T_4.3, 5;
+    %jmp/0xz T_2.3, 5;
     %delay 1, 0;
-    %load/v 8, v0x2297620_0, 4;
-    %set/v v0x2297570_0, 8, 4;
-    %load/v 8, v0x2297620_0, 4;
+    %load/v 8, v0x1fab880_0, 4;
+    %set/v v0x1fab7b0_0, 8, 4;
+    %load/v 8, v0x1fab880_0, 4;
     %mov 12, 0, 28;
     %addi 8, 1, 32;
-    %set/v v0x2297620_0, 8, 4;
-    %jmp T_4.2;
-T_4.3 ;
-    %load/v 8, v0x2297400_0, 4;
+    %set/v v0x1fab880_0, 8, 4;
+    %jmp T_2.2;
+T_2.3 ;
+    %load/v 8, v0x1fab660_0, 4;
     %mov 12, 0, 28;
     %addi 8, 1, 32;
-    %set/v v0x2297400_0, 8, 4;
-    %jmp T_4.0;
-T_4.1 ;
+    %set/v v0x1fab660_0, 8, 4;
+    %jmp T_2.0;
+T_2.1 ;
     %delay 20, 0;
-    %vpi_call 2 33 "$finish";
-    %jmp T_4;
-    .thread T_4;
+    %vpi_call 2 37 "$finish";
+    %jmp T_2;
+    .thread T_2;
 # The file index is used to find the file name in the following table.
-:file_names 4;
+:file_names 6;
     "N/A";
     "<interactive>";
-    "sum4bit_tb.v";
+    "adderBCD_tb.v";
+    "./adderBCD.v";
     "./sum4bit.v";
+    "./decoderBCD.v";

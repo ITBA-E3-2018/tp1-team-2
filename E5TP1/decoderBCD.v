@@ -14,19 +14,11 @@ input [4:0] in;
 output [3:0] out0;
 output [3:0] out1;
 
-//Resources Definition
+//Data type definition
 wire [4:0] in;
-reg [3:0] out0;
-reg [3:0] out1;
+wire [3:0] out0;
+wire [3:0] out1;
 
-initial begin
-  out0 = 0;
-  out1 = 0;
-end
-
-always @(in) begin
-out1 = in/10;
-out0 = in%10;
-end
-
+assign out0 = in % 10;
+assign out1 = in / 10;
 endmodule

@@ -4,16 +4,16 @@ module sum4bit(
     o   //Resultado (5-bit)
 );
 
-input wire [3:0] x0, x1;
-output reg [4:0] o;
+//Definiendo Inputs
+input [3:0] x0, x1; //Sumandos
 
-initial begin
-  o = 0;
-end
+//Definiendo Outputs
+output [4:0] o;   //Resultado
 
-always @(x0 or x1) begin
-  o = x0 + x1;
-end
+//Definiendo los tipos de dato
+wire [3:0] x0, x1;
+wire [4:0] o;
 
+assign o = x0 + x1;
 
 endmodule
