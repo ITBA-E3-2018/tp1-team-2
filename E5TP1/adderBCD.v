@@ -25,4 +25,10 @@ wire [3:0] out0,out1;
 sum4bit adder(.x0(in0),.x1(in1),.o(sum));
 decoderBCD decoder (.in(sum),.out0(out0),.out1(out1));
 
+
+//Code
+/*
+Get whatever is going to do the sum of the 2 4-bit numbers here
+*/
+
 endmodule
