@@ -22,27 +22,21 @@ output flag;
 //Defining data types
 wire [3:0] in0, in1;
 wire [4:0] sum;
-reg [3:0] out0,out1;
-wire flag;
+wire [3:0] out0,out1;
+wire [3:0] f0, f1;
+wire e0, e1;
 
 //Declaring included modules
-filterBCD filter0(.in(in0), .out(adder.x0), .error(flag));
-filterBCD filter1(.in(in1), .out(adder.x1), .error(flag));
-sum4bit adder(.x0(in0),.x1(in1),.o(sum));
+filterBCD filter0(.in(in0), .out(f0), .error(e0));
+filterBCD filter1(.in(in1), .out(f1), .error(e1));
+sum4bit adder(.x0(f0),.x1(f1),.o(sum));
 decoderBCD decoder (.in(sum),.out0(out0),.out1(out1));
 
-
+assign flag = e0 || e1;
 
 //Code
 /*
 Get whatever is going to do the sum of the 2 4-bit numbers here
 */
-
-always @ (in0 or in1) begin
-  if(flag == 1) begin
-    assign out0 = x;
-    assign out1 = x;
-  end
-end
 
 endmodule
