@@ -22,12 +22,8 @@ end
 always @ (in) begin
   if (in>9) begin
     error = 1;
-    out = 0;
   end
-  else begin
-    error = 0;
-    out = in;
-  end
+  assign out = in;
 end
 
 
