@@ -32,7 +32,7 @@ Dada una cierta convención de números en punto fijo (Signado, Cant. bits de pa
 parte fraccionaria), escribir un programa que acepte estos tres parámetros por línea de comando en forma
 numérica e imprima resolución y rango de la convención elegida. 
 
-###Imprimir ERROR ante entradas no válidas.
+### Imprimir ERROR ante entradas no válidas.
 
 Ejemplo:
 

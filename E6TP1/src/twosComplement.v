@@ -28,9 +28,7 @@ module twosComplement(x1,x2,x3,x4,f1,f2,f3,f4);
 
     //Four Bit Output
     wire q;
-    and(q,nx1,nx2,nx3);
-    or(f4,x4,q); //Four Bit Output
+    and(f4,x4,x4);
 
 
 endmodule
-//Works Perfectly
