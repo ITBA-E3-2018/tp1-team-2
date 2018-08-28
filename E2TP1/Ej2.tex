@@ -192,6 +192,7 @@
 
     Karnaugh map is a easier way to simplify logic experesion when the functions are too complex or too large to handle, cause Karnaugh map gives a more representative view for a faster analisis for it to simplify. 
 
+    If the simplification is done with minterms, the groups should be of $1$, adding each group in case there is more than 1, and in each group the independent variables would be multiplied.
     \begin{center}
         \begin{Karnaugh}
             %cada 4 es una fila, la col 3 es la 4ta columna y 3fila es la 4 fila
@@ -216,5 +217,7 @@
         &&+(\overline{A}\overline{B}C)~(Orange)\\
         &&+(AB\overline{C})~(Green)
     \end{eqnarray*}
+ 
+    The same method could be done with maxterms, grouping $O$, multipling groups in case there is more than 1, and in each group the independent variables would be added.
     
     \end{document}
