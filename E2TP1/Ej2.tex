@@ -173,7 +173,7 @@
     
     Having the function in maxterms $$f_1 (A,B,C,D) = \prod\left(M_0, M_1 , M_5 , M_7 , M_8 , M_{10} , M_{14} , M_{15} \right)$$ equivalent to $$f_2 (A,B,C,D) = \sum\left(m_2, m_3 , m_4 , m_6 , m_9 , m_{11} , m_{12} , m_{13} \right)$$ using minterms, can be simplify by different ways and represented using logic gates.
 
-    \subsection{Boolean Algebra}
+    \subsection{Simplify: Boolean Algebra}
 
     Using the Boolean algebra propertie $$(A+B).(A+\overline{B})=A~(1)$$ or $$(AB)+(A\overline{B})=A~(2)$$ the function could be simplify using (1): 
     \begin{eqnarray*}
@@ -188,7 +188,7 @@
         &=&(A\overline{B}D)+(\overline{A}B\overline{D})+(\overline{A}\overline{B}C)+(AB\overline{C})
     \end{eqnarray*}
 
-    \subsection{Karnaugh Map}
+    \subsection{Simplify: Karnaugh Map}
 
     Karnaugh map is a easier way to simplify logic experesion when the functions are too complex or too large to handle, cause Karnaugh map gives a more representative view for a faster analisis for it to simplify. 
 
@@ -218,6 +218,31 @@
         &&+(AB\overline{C})~(Green)
     \end{eqnarray*}
  
-    The same method could be done with maxterms, grouping $O$, multipling groups in case there is more than 1, and in each group the independent variables would be added.
+    The same method could be done with maxterms; grouping $O$, multipling groups in case there is more than 1, and in each group the independent variables would be added.
     
+    \subsection{Logic Circuit: AND, OR and NOT}
+
+    Using the logic gates AND, OR and NOT the simplify version of the function could be represented in the figure below:
+
+    \begin{figure}[htb!]
+        \centering
+        \includegraphics[scale=0.45]{normallogic.png}
+        \caption{Logic circuit using AND, OR and NOT gates}
+        \label{fig:normllogic}
+    \end{figure}
+    
+    \pagebreak
+
+    \subsection{Logic Circuit: NAND}
+
+    All the gates could be equivalent to a combination of NAND or NOR gates. Therefore, the simplify function can be drawn as the next figure:
+
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[scale=0.45]{nandlogic.png}
+        \caption{Logic circuit using NAND gates}
+        \label{fig:nandlogic}
+    \end{figure}
+
+
     \end{document}

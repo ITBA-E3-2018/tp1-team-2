@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1535414648 "/home/bzerol/VisualCode/ElectroIII/tp1-team-2/E2TP1/Ej2.tex" "Ej2.pdf" "Ej2" 1535414651
+["pdflatex"] 1535492488 "/home/bzerol/VisualCode/ElectroIII/tp1-team-2/E2TP1/Ej2.tex" "Ej2.pdf" "Ej2" 1535492490
   "/etc/texmf/web2c/texmf.cnf" 1534190297 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/bzerol/VisualCode/ElectroIII/tp1-team-2/E2TP1/Ej2.tex" 1535414645 10267 a060f89036fb4651195be25ea9e250ba ""
+  "/home/bzerol/VisualCode/ElectroIII/tp1-team-2/E2TP1/Ej2.tex" 1535492486 11059 9acb83bd4de92931b2aada2b98cd3076 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -124,8 +124,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1535397676 1522025 712255bf90b3ac3b1340c49a49587b87 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1535398371 781150 bc25b71c4a3cd223850e6416a3f7a8cb ""
-  "Ej2.aux" 1535414651 241 054a844e372207d95a90cf351faeb328 ""
-  "Ej2.tex" 1535414645 10267 a060f89036fb4651195be25ea9e250ba ""
+  "Ej2.aux" 1535492490 736 2998cc499d3f6c0250f79a3e65510f75 ""
+  "Ej2.tex" 1535492486 11059 9acb83bd4de92931b2aada2b98cd3076 ""
+  "nandlogic.png" 1535491704 27371 261f0d5b95e4a8d7539cdc00427e331d ""
+  "normallogic.png" 1535491694 25181 abf214084d6dad6cb77ce785a90e694c ""
   (generated)
   "Ej2.pdf"
   "Ej2.log"
