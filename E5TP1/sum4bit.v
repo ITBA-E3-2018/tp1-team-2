@@ -1,16 +1,16 @@
 module sum4bit(
-    x0, //Sumando 0 (4-bit)
-    x1, //Sumando 1 (4-bit)
-    o   //Resultado (5-bit)
+    x0, //Addend 0 (4-bit)
+    x1, //Addend 1 (4-bit)
+    o   //Result (5-bit)
 );
 
-//Definiendo Inputs
-input [3:0] x0, x1; //Sumandos
+//Defining Inputs
+input [3:0] x0, x1; //Addends
 
-//Definiendo Outputs
-output [4:0] o;   //Resultado
+//Defining Outputs
+output [4:0] o;   //Result
 
-//Definiendo los tipos de dato
+//Defining Data types
 wire [3:0] x0, x1;
 wire [4:0] o;
 

@@ -1,6 +1,6 @@
 module  encoder (
-encoder_in, //Entrada de 4 patas
-encoder_out //Salida Binaria de 2 patas
+encoder_in, //4-bit Input
+encoder_out //2-bit Output
 );
 
   //Initialize Input(s).
