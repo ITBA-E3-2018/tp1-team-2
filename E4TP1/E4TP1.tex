@@ -1,10 +1,8 @@
-%% LyX 2.2.3 created this file.  For more info, see http://www.lyx.org/.
-%% Do not edit unless you really know what you are doing.
 \documentclass[english]{article}
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
 \usepackage{geometry}
-\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=3cm,rmargin=3cm,headheight=3cm,headsep=3cm}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=2cm,headsep=2cm}
 \usepackage{float}
 \usepackage{graphicx}
 
@@ -17,159 +15,163 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
 \usepackage{babel}
 
+
+
+
+\usepackage{babel}
+
 \makeatother
 
 \usepackage{babel}
 \begin{document}
 
-\section{Ejercicio 4}
+\section{Exercise 4}
 
 \begin{figure}[H]
 \begin{centering}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
-\hline 
+\hline
 $x_{1}$  & $x_{2}$  & $x_{3}$  & $x_{4}$  & $f_{1}$  & $f_{2}$  & $f_{3}$  & $f_{4}$\tabularnewline
-\hline 
-\hline 
+\hline
+\hline
 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0\tabularnewline
-\hline 
+\hline
 0  & 0  & 0  & 1  & 1  & 1  & 1  & 1\tabularnewline
-\hline 
+\hline
 0  & 0  & 1  & 0  & 1  & 1  & 1  & 0\tabularnewline
-\hline 
+\hline
 0  & 0  & 1  & 1  & 1  & 1  & 0  & 1\tabularnewline
-\hline 
+\hline
 0  & 1  & 0  & 0  & 1  & 1  & 0  & 0\tabularnewline
-\hline 
+\hline
 0  & 1  & 0  & 1  & 1  & 0  & 1  & 1\tabularnewline
-\hline 
+\hline
 0  & 1  & 1  & 0  & 1  & 0  & 1  & 0\tabularnewline
-\hline 
+\hline
 0  & 1  & 1  & 1  & 1  & 0  & 0  & 1\tabularnewline
-\hline 
+\hline
 1  & 0  & 0  & 0  & 1  & 0  & 0  & 0\tabularnewline
-\hline 
+\hline
 1  & 0  & 0  & 1  & 0  & 1  & 1  & 1\tabularnewline
-\hline 
+\hline
 1  & 0  & 1  & 0  & 0  & 1  & 1  & 0\tabularnewline
-\hline 
+\hline
 1  & 0  & 1  & 1  & 0  & 1  & 0  & 1\tabularnewline
-\hline 
+\hline
 1  & 1  & 0  & 0  & 0  & 1  & 0  & 0\tabularnewline
-\hline 
+\hline
 1  & 1  & 0  & 1  & 0  & 0  & 1  & 1\tabularnewline
-\hline 
+\hline
 1  & 1  & 1  & 0  & 0  & 0  & 1  & 0\tabularnewline
-\hline 
+\hline
 1  & 1  & 1  & 1  & 0  & 0  & 0  & 1\tabularnewline
-\hline 
+\hline
 \end{tabular}
 \par\end{centering}
-\caption{Complemento a 2 de los bits de entrada}
+\caption{Two's Complement truth table for 4 bits}
 \end{figure}
 
-Si escribimos cada bit de salida en función de los mintérminos de
-los bits de entrada, nos quedan las siguientes ecuaciónes: 
+If we write every signle input bit according to the minterms, we have
+left the following equations:
 \begin{center}
-$f_{1}(m_{i})=m_{1}+m_{2}+m_{3}+m_{4}+m_{5}+m_{6}+m_{7}+m_{8}$ 
+$f_{1}(m_{i})=m_{1}+m_{2}+m_{3}+m_{4}+m_{5}+m_{6}+m_{7}+m_{8}$
 \par\end{center}
 
 \begin{center}
-$f_{2}(m_{i})=m_{1}+m_{2}+m_{3}+m_{4}+m_{9}+m_{10}+m_{11}+m_{12}$ 
+$f_{2}(m_{i})=m_{1}+m_{2}+m_{3}+m_{4}+m_{9}+m_{10}+m_{11}+m_{12}$
 \par\end{center}
 
 \begin{center}
-$f_{3}(m_{i})=m_{1}+m_{2}+m_{5}+m_{6}+m_{9}+m_{10}+m_{13}+m_{14}$ 
+$f_{3}(m_{i})=m_{1}+m_{2}+m_{5}+m_{6}+m_{9}+m_{10}+m_{13}+m_{14}$
 \par\end{center}
 
 \begin{center}
-$f_{4}(m_{i})=m_{1}+m_{3}+m_{5}+m_{7}+m_{9}+m_{11}+m_{13}+m_{15}$ 
+$f_{4}(m_{i})=m_{1}+m_{3}+m_{5}+m_{7}+m_{9}+m_{11}+m_{13}+m_{15}$
 \par\end{center}
 
-Remplazando los valores de cada mintermino, quedan las siguientes
-formulas: 
+Replacing the values of each minterm, we have got the following:
 \begin{center}
-$f_{1}(x_{1};x_{2};x_{3};x_{4})=\bar{x_{1}}\bar{x_{2}}\bar{x_{3}}x_{4}+\bar{x_{1}}\bar{x_{2}}x_{3}\bar{x_{4}}+\bar{x_{1}}\bar{x_{2}}x_{3}x_{4}+\bar{x_{1}}x_{2}\bar{x_{3}}\bar{x_{4}}+\bar{x_{1}}x_{2}\bar{x_{3}}x_{4}+\bar{x_{1}}x_{2}x_{3}\bar{x_{4}}+\bar{x_{1}}x_{2}x_{3}x_{4}+x_{1}\bar{x_{2}}\bar{x_{3}}\bar{x_{4}}$ 
-\par\end{center}
-
-\begin{center}
-$f_{2}(x_{1};x_{2};x_{3};x_{4})=\bar{x_{1}}\bar{x_{2}}\bar{x_{3}}x_{4}+\bar{x_{1}}\bar{x_{2}}x_{3}\bar{x_{4}}+\bar{x_{1}}\bar{x_{2}}x_{3}x_{4}+\bar{x_{1}}x_{2}\bar{x_{3}}\bar{x_{4}}+x_{1}\bar{x_{2}}\bar{x_{3}}x_{4}+x_{1}\bar{x_{2}}x_{3}\bar{x_{4}}+x_{1}\bar{x_{2}}x_{3}x_{4}+x_{1}x_{2}\bar{x_{3}}\bar{x_{4}}$ 
+$f_{1}(x_{1};x_{2};x_{3};x_{4})=\bar{x_{1}}\bar{x_{2}}\bar{x_{3}}x_{4}+\bar{x_{1}}\bar{x_{2}}x_{3}\bar{x_{4}}+\bar{x_{1}}\bar{x_{2}}x_{3}x_{4}+\bar{x_{1}}x_{2}\bar{x_{3}}\bar{x_{4}}+\bar{x_{1}}x_{2}\bar{x_{3}}x_{4}+\bar{x_{1}}x_{2}x_{3}\bar{x_{4}}+\bar{x_{1}}x_{2}x_{3}x_{4}+x_{1}\bar{x_{2}}\bar{x_{3}}\bar{x_{4}}$
 \par\end{center}
 
 \begin{center}
-$f_{3}(x_{1};x_{2};x_{3};x_{4})=\bar{x_{1}}\bar{x_{2}}\bar{x_{3}}x_{4}+\bar{x_{1}}\bar{x_{2}}x_{3}\bar{x_{4}}+\bar{x_{1}}x_{2}\bar{x_{3}}x_{4}+\bar{x_{1}}x_{2}x_{3}\bar{x_{4}}+x_{1}\bar{x_{2}}\bar{x_{3}}x_{4}+x_{1}\bar{x_{2}}x_{3}\bar{x_{4}}+x_{1}x_{2}\bar{x_{3}}x_{4}+x_{1}x_{2}x_{3}\bar{x_{4}}$ 
+$f_{2}(x_{1};x_{2};x_{3};x_{4})=\bar{x_{1}}\bar{x_{2}}\bar{x_{3}}x_{4}+\bar{x_{1}}\bar{x_{2}}x_{3}\bar{x_{4}}+\bar{x_{1}}\bar{x_{2}}x_{3}x_{4}+\bar{x_{1}}x_{2}\bar{x_{3}}\bar{x_{4}}+x_{1}\bar{x_{2}}\bar{x_{3}}x_{4}+x_{1}\bar{x_{2}}x_{3}\bar{x_{4}}+x_{1}\bar{x_{2}}x_{3}x_{4}+x_{1}x_{2}\bar{x_{3}}\bar{x_{4}}$
 \par\end{center}
 
 \begin{center}
-$f_{4}(x_{1};x_{2};x_{3};x_{4})=\bar{x_{1}}\bar{x_{2}}\bar{x_{3}}x_{4}+\bar{x_{1}}\bar{x_{2}}x_{3}x_{4}+\bar{x_{1}}x_{2}\bar{x_{3}}x_{4}+\bar{x_{1}}x_{2}x_{3}x_{4}+x_{1}\bar{x_{2}}\bar{x_{3}}x_{4}+x_{1}\bar{x_{2}}x_{3}x_{4}+x_{1}x_{2}\bar{x_{3}}x_{4}+x_{1}x_{2}x_{3}x_{4}$ 
-\par\end{center}
-
-Si simplificamos cada ecuación, se puede llegar a las siguientes expresiones: 
-\begin{center}
-$f_{1}(x_{1};x_{2};x_{3};x_{4})=x_{1}\bar{x_{2}}\bar{x_{3}}\bar{x_{4}}+\bar{x_{1}}(x_{2}+x_{3}+x_{4})$ 
+$f_{3}(x_{1};x_{2};x_{3};x_{4})=\bar{x_{1}}\bar{x_{2}}\bar{x_{3}}x_{4}+\bar{x_{1}}\bar{x_{2}}x_{3}\bar{x_{4}}+\bar{x_{1}}x_{2}\bar{x_{3}}x_{4}+\bar{x_{1}}x_{2}x_{3}\bar{x_{4}}+x_{1}\bar{x_{2}}\bar{x_{3}}x_{4}+x_{1}\bar{x_{2}}x_{3}\bar{x_{4}}+x_{1}x_{2}\bar{x_{3}}x_{4}+x_{1}x_{2}x_{3}\bar{x_{4}}$
 \par\end{center}
 
 \begin{center}
-$f_{2}(x_{1};x_{2};x_{3};x_{4})=x_{2}\bar{x_{3}}\bar{x_{4}}+\bar{x_{2}}(x_{3}+x_{4})$ 
+$f_{4}(x_{1};x_{2};x_{3};x_{4})=\bar{x_{1}}\bar{x_{2}}\bar{x_{3}}x_{4}+\bar{x_{1}}\bar{x_{2}}x_{3}x_{4}+\bar{x_{1}}x_{2}\bar{x_{3}}x_{4}+\bar{x_{1}}x_{2}x_{3}x_{4}+x_{1}\bar{x_{2}}\bar{x_{3}}x_{4}+x_{1}\bar{x_{2}}x_{3}x_{4}+x_{1}x_{2}\bar{x_{3}}x_{4}+x_{1}x_{2}x_{3}x_{4}$
+\par\end{center}
+
+So, by simplification methods and properties, we can achieve this
+four formulas to describe each output bit according to the input bits:
+\begin{center}
+$f_{1}(x_{1};x_{2};x_{3};x_{4})=x_{1}\bar{x_{2}}\bar{x_{3}}\bar{x_{4}}+\bar{x_{1}}(x_{2}+x_{3}+x_{4})$
 \par\end{center}
 
 \begin{center}
-$f_{3}(x_{1};x_{2};x_{3};x_{4})=x_{3}\bar{x_{4}}+\bar{x_{3}}x_{4}$ 
+$f_{2}(x_{1};x_{2};x_{3};x_{4})=x_{2}\bar{x_{3}}\bar{x_{4}}+\bar{x_{2}}(x_{3}+x_{4})$
 \par\end{center}
 
 \begin{center}
-$f_{4}(x_{1};x_{2};x_{3};x_{4})=x_{4}$ 
+$f_{3}(x_{1};x_{2};x_{3};x_{4})=x_{3}\bar{x_{4}}+\bar{x_{3}}x_{4}$
 \par\end{center}
 
-Al intentar expresar dichas formulas en graficos de compuertas logicas,
-se consiguieron los siguientes:
+\begin{center}
+$f_{4}(x_{1};x_{2};x_{3};x_{4})=x_{4}$
+\par\end{center}
+
+By trying to express those formulas in logic gates graphs, we got
+the following:
 
 \begin{figure}[H]
 \begin{centering}
-\includegraphics[scale=0.25]{images/1} 
+\includegraphics[scale=0.25]{images/1}
 \par\end{centering}
-\caption{Grafico de compuertas logicas Bit 1}
-\end{figure}
-
-\begin{figure}[H]
-\begin{centering}
-\includegraphics[scale=0.25]{images/2} 
-\par\end{centering}
-\caption{Grafico de compuertas logicas Bit 2}
+\caption{1st Bit's logic gates graph}
 \end{figure}
 
 \begin{figure}[H]
 \begin{centering}
-\includegraphics[scale=0.25]{images/3} 
+\includegraphics[scale=0.25]{images/2}
 \par\end{centering}
-\caption{Grafico de compuertas logicas Bit 3}
+\caption{2nd Bit's logic gates graph}
 \end{figure}
 
 \begin{figure}[H]
 \begin{centering}
-\includegraphics[scale=0.25]{images/4} 
+\includegraphics[scale=0.25]{images/3}
 \par\end{centering}
-\caption{Grafico de compuertas logicas Bit 4}
+\caption{3th Bit's logic gates graph}
 \end{figure}
-
-Finalmente, esta logica de compuertas fue implementada en verilog
-de la siguiente manera:
 
 \begin{figure}[H]
 \begin{centering}
-\includegraphics[scale=0.4]{images/5} 
+\includegraphics[scale=0.25]{images/4}
 \par\end{centering}
-\caption{Implementacion de la logica en Verilog}
+\caption{4th Bit's logic gates graph}
 \end{figure}
 
-y al probar el codigo con un test.v se obtuvo la siguiente salida,
-confirmando que el codigo se realizo de manera exitosa.
+Finally, this logic was implemented on verilog as follows:
 
 \begin{figure}[H]
 \begin{centering}
-\includegraphics[scale=0.4]{images/6} 
+\includegraphics[scale=0.4]{images/5}
 \par\end{centering}
-\caption{Salida de la implementacion en la Terminal}
+\caption{Verilog implementation}
+\end{figure}
+
+and, by testing the code with test.v, we have got the following output,
+confirming that the code was executed correctly.
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.4]{images/6}
+\par\end{centering}
+\caption{Terminal's output}
 \end{figure}
 
 \end{document}
