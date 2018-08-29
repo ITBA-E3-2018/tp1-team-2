@@ -26,17 +26,28 @@ wire [3:0] out0,out1;
 wire [3:0] f0, f1;
 wire e0, e1;
 
-//Declaring included modules
-filterBCD filter0(.in(in0), .out(f0), .error(e0));
-filterBCD filter1(.in(in1), .out(f1), .error(e1));
-sum4bit adder(.x0(f0),.x1(f1),.o(sum));
-decoderBCD decoder (.in(sum),.out0(out0),.out1(out1));
+//Declaring and connecting modules
+filterBCD filter0(
+    .in(in0),
+    .out(f0),
+    .error(e0)
+    );
+filterBCD filter1(
+    .in(in1),
+    .out(f1),
+    .error(e1)
+    );
+sum4bit adder(
+    .x0(f0),
+    .x1(f1),
+    .o(sum)
+    );
+decoderBCD decoder (
+    .in(sum),
+    .out0(out0),
+    .out1(out1)
+    );
 
 assign flag = e0 || e1;
-
-//Code
-/*
-Get whatever is going to do the sum of the 2 4-bit numbers here
-*/
 
 endmodule

@@ -12,7 +12,11 @@ initial begin
   $monitor("%b %d\t%b\t%b",in, in, out, flag);
 end
 
-filterBCD filter_udt(.in(in), .out(out), .error(flag));
+filterBCD filter_udt(
+    .in(in),
+    .out(out),
+    .error(flag)
+    );
 
 always @ (in) begin
     for (in = 0; in<14 ; in = in + 1 ) begin

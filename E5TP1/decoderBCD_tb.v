@@ -9,7 +9,11 @@ wire [3:0] out0;
 wire [3:0] out1;
 
 //Connecting the ports
-decoderBCD dec_udt(.in(in), .out0(out0), .out1(out1));
+decoderBCD dec_udt(
+  .in(in),
+  .out0(out0),
+  .out1(out1)
+  );
 
 //Code
 initial begin

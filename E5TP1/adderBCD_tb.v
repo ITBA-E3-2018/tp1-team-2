@@ -11,7 +11,13 @@ wire flag;
 reg [3:0] i,j;
 
 //Connecting the ports adderBCD
-adderBCD adder_udt(.in0(in0), .in1(in1), .out0(out0), .out1(out1), .flag(flag));
+adderBCD adder_udt(
+  .in0(in0),
+  .in1(in1),
+  .out0(out0),
+  .out1(out1),
+  .flag(flag)
+  );
 
 
 //Code

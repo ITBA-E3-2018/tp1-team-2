@@ -7,7 +7,11 @@ reg [3:0] in0, in1, i, j;
 wire [4:0] out;
 
 //Connecting the ports
-sum4bit sum_udt(.x0(in0), .x1(in1), .o(out));
+sum4bit sum_udt(
+  .x0(in0),
+  .x1(in1),
+  .o(out)
+  );
 
 //Code
 initial begin
