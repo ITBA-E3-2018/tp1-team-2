@@ -1,4 +1,4 @@
-`include "encoder.v"
+`include "src/encoder/encoder.v"
 
 module encoder_tb;
 

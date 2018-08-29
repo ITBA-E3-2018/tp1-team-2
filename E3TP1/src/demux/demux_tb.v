@@ -1,4 +1,4 @@
-`include "demux.v"
+`include "src/demux/demux.v"
 
 module demux_tb;
 

@@ -1,0 +1,3 @@
+vvp ./bin/encoder.out
+
+vvp ./bin/demux.out
