@@ -1,6 +1,6 @@
-`include "decoderBCD.v"
-`include "sum4bit.v"
-`include "filterBCD.v"
+`include "src/decoderBCD/decoderBCD.v"
+`include "src/sum4bit/sum4bit.v"
+`include "src/filterBCD/filterBCD.v"
 
 module adderBCD(
     in0,    //BCD Input 0

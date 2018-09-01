@@ -1,4 +1,4 @@
-`include "filterBCD.v"
+`include "src/filterBCD/filterBCD.v"
 
 module filterBCD_tb;
 

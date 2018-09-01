@@ -1,4 +1,4 @@
-`include "decoderBCD.v"
+`include "src/decoderBCD/decoderBCD.v"
 
 module decoderBCD_tb;
 

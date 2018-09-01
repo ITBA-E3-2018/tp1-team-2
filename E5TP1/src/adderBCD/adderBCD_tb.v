@@ -1,4 +1,4 @@
-`include "adderBCD.v"
+`include "src/adderBCD/adderBCD.v"
 
 module adderBCD_tb;
 

@@ -1,4 +1,4 @@
-`include "sum4bit.v"
+`include "src/sum4bit/sum4bit.v"
 
 module sum4bit_tb;
 
