@@ -1,0 +1,7 @@
+vvp bin/filterBCD.out > tests.txt
+echo >> tests.txt
+vvp bin/sum4bit.out >> tests.txt
+echo >> tests.txt
+vvp bin/decoderBCD.out >> tests.txt
+echo >> tests.txt
+vvp bin/adderBCD.out > final.txt

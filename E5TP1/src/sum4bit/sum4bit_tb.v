@@ -23,7 +23,7 @@ initial begin
   in0 = 0;
   in1 = 0;
   $display("In0\t+\tIn1\t=\tOut");
-  $monitor("%d\t%d\t%d", in0, in1, out);
+  $monitor("%d\t\t%d\t\t%d", in0, in1, out);
 end
 
 

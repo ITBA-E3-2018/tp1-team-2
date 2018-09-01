@@ -1,0 +1,81 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0xfa2f20 .scope module, "sum4bit_tb" "sum4bit_tb" 2 3;
+ .timescale 0 0;
+v0xfb6830_0 .var "i", 3 0;
+v0xfb68f0_0 .var "in0", 3 0;
+v0xfb6970_0 .var "in1", 3 0;
+v0xfb6a20_0 .var "j", 3 0;
+v0xfb6ad0_0 .net "out", 4 0, L_0xfb6eb0; 1 drivers
+S_0xfa3010 .scope module, "sum_udt" "sum4bit" 2 10, 3 1, S_0xfa2f20;
+ .timescale 0 0;
+v0xf80ab0_0 .net *"_s0", 4 0, L_0xfb6b80; 1 drivers
+v0xfb6420_0 .net *"_s3", 0 0, C4<0>; 1 drivers
+v0xfb64c0_0 .net *"_s4", 4 0, L_0xfb6d30; 1 drivers
+v0xfb6560_0 .net *"_s7", 0 0, C4<0>; 1 drivers
+v0xfb6610_0 .alias "o", 4 0, v0xfb6ad0_0;
+v0xfb66b0_0 .net "x0", 3 0, v0xfb68f0_0; 1 drivers
+v0xfb6790_0 .net "x1", 3 0, v0xfb6970_0; 1 drivers
+L_0xfb6b80 .concat [ 4 1 0 0], v0xfb68f0_0, C4<0>;
+L_0xfb6d30 .concat [ 4 1 0 0], v0xfb6970_0, C4<0>;
+L_0xfb6eb0 .arith/sum 5, L_0xfb6b80, L_0xfb6d30;
+    .scope S_0xfa2f20;
+T_0 ;
+    %vpi_call 2 18 "$dumpfile", "sum4bit.vcd";
+    %vpi_call 2 19 "$dumpvars";
+    %end;
+    .thread T_0;
+    .scope S_0xfa2f20;
+T_1 ;
+    %set/v v0xfb68f0_0, 0, 4;
+    %set/v v0xfb6970_0, 0, 4;
+    %vpi_call 2 25 "$display", "In0\011+\011In1\011=\011Out";
+    %vpi_call 2 26 "$monitor", "%d\011\011%d\011\011%d", v0xfb68f0_0, v0xfb6970_0, v0xfb6ad0_0;
+    %end;
+    .thread T_1;
+    .scope S_0xfa2f20;
+T_2 ;
+    %set/v v0xfb6830_0, 0, 4;
+T_2.0 ;
+    %load/v 8, v0xfb6830_0, 4;
+    %mov 12, 0, 2;
+   %cmpi/u 8, 15, 6;
+    %jmp/0xz T_2.1, 5;
+    %delay 1, 0;
+    %load/v 8, v0xfb6830_0, 4;
+    %set/v v0xfb68f0_0, 8, 4;
+    %set/v v0xfb6a20_0, 0, 4;
+T_2.2 ;
+    %load/v 8, v0xfb6a20_0, 4;
+    %mov 12, 0, 2;
+   %cmpi/u 8, 15, 6;
+    %jmp/0xz T_2.3, 5;
+    %delay 1, 0;
+    %load/v 8, v0xfb6a20_0, 4;
+    %set/v v0xfb6970_0, 8, 4;
+    %load/v 8, v0xfb6a20_0, 4;
+    %mov 12, 0, 28;
+    %addi 8, 1, 32;
+    %set/v v0xfb6a20_0, 8, 4;
+    %jmp T_2.2;
+T_2.3 ;
+    %load/v 8, v0xfb6830_0, 4;
+    %mov 12, 0, 28;
+    %addi 8, 1, 32;
+    %set/v v0xfb6830_0, 8, 4;
+    %jmp T_2.0;
+T_2.1 ;
+    %delay 20, 0;
+    %vpi_call 2 37 "$finish";
+    %jmp T_2;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "src/sum4bit/sum4bit_tb.v";
+    "./src/sum4bit/sum4bit.v";

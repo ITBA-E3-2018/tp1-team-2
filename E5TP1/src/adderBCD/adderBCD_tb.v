@@ -29,8 +29,8 @@ end
 initial begin
   in0 = 0;
   in1 = 0;
-  $display("In0\tIn1\tOut\tError");
-  $monitor("%d\t%d\t%d,%d\t%b", in0, in1, out1, out0, flag);
+  $display("In0\tIn1\t\tOut\t\tError");
+  $monitor("%d\t%d\t\t%d,%d\t%b", in0, in1, out1, out0, flag);
 end
 
 

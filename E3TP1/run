@@ -1,3 +1,3 @@
-vvp ./bin/encoder.out
-
-vvp ./bin/demux.out
+vvp ./bin/encoder.out > tests.txt
+echo " " >> tests.txt
+vvp ./bin/demux.out >> tests.txt
