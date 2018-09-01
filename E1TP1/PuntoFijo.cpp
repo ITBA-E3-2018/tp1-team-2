@@ -1,41 +1,83 @@
 
-#include "PuntoFijo.h"
+#include "FixedPoint.h"
 #include <iostream>
 #include <math.h>
 
-
-void PuntoFijo::setParteEntera(char* secuencia)
+////////////////////////////////// Set Integer Part /////////////////////////////////////////	
+//
+// Setter function: sets the variable integerPart of the class FixedPoint with the received value.
+//
+// The function receives:
+// * A string of chars: the integer part of a fixed point number.
+//
+// The function returns:
+// * (nothing)
+//
+/////////////////////////////////////////////////////////////////////////////////////////////
+void FixedPoint::setIntegerPart(char* secuencia)
 {
-	parteEntera = secuencia;
+	integerPart = secuencia;
 #ifdef DEBUG
 	std::cout << "parte Entera: " << parteEntera << std::endl;
-	//std::cout << "parte Entera SIZE: " << parteEntera.size() << std::endl;
 	std::cout << "parte Entera SIZE: " << toInt(parteEntera) << std::endl;
 #endif // DEBUG
 }
 
-void PuntoFijo::setParteFraccionaria(char* secuencia)
+////////////////////////////////// Set Fractional Part ///////////////////////////////////////	
+//
+// Setter function: sets the variable fractionalPart of the class FixedPoint with the received value.
+//
+// The function receives:
+// * A string of chars: the fractional part of a fixed point number.
+//
+// The function returns:
+// * (nothing)
+//
+/////////////////////////////////////////////////////////////////////////////////////////////
+void FixedPoint::setFractionalPart(char* secuencia)
 {
-	parteFraccionaria = secuencia;
+	fractionalPart = secuencia;
 #ifdef DEBUG
 	std::cout << "parte Fraccionaria: " << parteFraccionaria << std::endl;
-	//std::cout << "parte Fraccionaria SIZE: " << parteFraccionaria.size() << std::endl;
 	std::cout << "parte Fraccionaria SIZE: " << toInt(parteFraccionaria) << std::endl;
 	std::cout << "potencia: " << pow(2,toInt(parteFraccionaria)) << std::endl;
-	std::cout << "futuro resolution: " << 1.0 / pow(2,toInt(parteFraccionaria)) << std::endl;
+	std::cout << "future resolution: " << 1.0 / pow(2,toInt(parteFraccionaria)) << std::endl;
 #endif // DEBUG
 }
 
-void PuntoFijo::setResolution()
+////////////////////////////////////// Set Resolution /////////////////////////////////////////	
+//
+// Setter function: sets the variable resolution of the class FixedPoint with
+// resolution of the fixed-point-number's information from that same class.
+//
+// The function receives:
+// * (nothing)
+//
+// The function returns:
+// * (nothing)
+//
+/////////////////////////////////////////////////////////////////////////////////////////////
+void FixedPoint::setResolution()
 {
-	//resolution = 1.0 / pow(2,getParteFracciona); //CAMBIO ACA
-	resolution = 1.0 / pow(2, toInt(parteFraccionaria));
+	resolution = 1.0 / pow(2, toInt(fractionalPart));
 #ifdef DEBUG
 	std::cout << "RES: " << resolution << std::endl;
 #endif // DEBUG
 }
 
-void PuntoFijo::setRange()
+//////////////////////////////////////// Set Range //////////////////////////////////////////	
+//
+// Setter function: sets the variable range of the class FixedPoint with
+// range of the fixed-point-number's information from that same class.
+//
+// The function receives:
+// * (nothing)
+//
+// The function returns:
+// * (nothing)
+//
+/////////////////////////////////////////////////////////////////////////////////////////////
+void FixedPoint::setRange()
 {
 	double max = 0;
 	double min = 0;
@@ -44,26 +86,21 @@ void PuntoFijo::setRange()
 
 #ifdef DEBUG
 	std::cout << "ENTRA a setRange" <<  std::endl;
-	//std::cout << "parte entera SIZE:" << parteEntera.size()<<std::endl;
-	//std::cout << "parte fracc SIZE: " << parteFraccionaria.size()<< std::endl;
 	std::cout << "parte entera SIZE:" << toInt(parteEntera)<<std::endl;
 	std::cout << "parte fracc SIZE: " << toInt(parteFraccionaria)<< std::endl;
 #endif // DEBUG
 
 	if (signado)
 	{
-		//for (i = 0; i < (parteEntera.size() - 1); i++) //CAMBIO ACA
-		for (i = 0; i < (toInt(parteEntera)- 1); i++)
+		for (i = 0; i < (toInt(integerPart)- 1); i++)
 		{
 			max = max + pow(2,i);
 		}
-		//for (i = 1; i <= parteFraccionaria.size(); i++) //CAMBIO ACA
-		for (i = 1; i <= toInt(parteFraccionaria); i++)
+		for (i = 1; i <= toInt(fractionalPart); i++)
 		{
 			max = max + 1.0/pow(2,i);
 		}
-		//min = -(pow(2,(parteEntera.size() - 1))); //CAMBIO ACA
-		min = -(pow(2, (toInt(parteEntera) - 1)));
+		min = -(pow(2, (toInt(integerPart) - 1)));
 
 #ifdef DEBUG
 		std::cout << "max" << max << std::endl;
@@ -72,13 +109,11 @@ void PuntoFijo::setRange()
 	}
 	else
 	{
-		//for (i = 0; i < parteEntera.size(); i++) //CAMBIO ACA
-		for (i = 0; i < toInt(parteEntera); i++)
+		for (i = 0; i < toInt(integerPart); i++)
 		{
 			max = max + pow(2,i);
 		}
-		//for (i = 0; i < parteFraccionaria.size(); i++) //CAMBIO ACA
-		for (i = 0; i < toInt(parteFraccionaria); i++)
+		for (i = 0; i < toInt(fractionalPart); i++)
 		{
 			max = max + 1.0/pow(2,i);
 		}
@@ -91,25 +126,25 @@ void PuntoFijo::setRange()
 	range = max - min;
 }
 
-double PuntoFijo::getResolution()
+double FixedPoint::getResolution()
 {
 	return resolution;
 }
 
-double PuntoFijo::getRange()
+double FixedPoint::getRange()
 {
 	return range;
 }
 
-int PuntoFijo::toInt(string secuencia)
+int FixedPoint::toInt(string sequence)
 {
 	int inInts = 0;
 	int i = 0;
-	while (secuencia[i] != NULL)
+	while (sequence[i] != NULL)
 	{
-		if ((secuencia[i] >= 48) && (secuencia[i] <= 57))
+		if ((sequence[i] >= 48) && (sequence[i] <= 57))
 		{
-			inInts = inInts + (secuencia[i] - 48);
+			inInts = inInts + (sequence[i] - 48);
 		}
 		else
 		{

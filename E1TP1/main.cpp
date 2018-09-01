@@ -1,5 +1,29 @@
 
-#include "PuntoFijo.h"
+/////////////////////////////////////////////////////////////////////////////////////////////	
+//
+// Instituto Tecnologico de Buenos Aires						AUG - 2018
+//
+// ELECTRONICA 3 - TP1 - Excercise 1
+// By Group 2.
+//
+//
+// 						 ///////////////////////////////////////////////////////////////////
+// 						//	   Resolution and range of a fixed point binary number.
+// 					   /////////////////////////////////////////////////////////////////////
+//
+//
+// 
+// This program receives from command prompt:
+//   - 1st argument: 1 (indicating that the numeric representation of the binary number is
+//					 signed) or 0 (indicating that the representation is unsigned).
+//   - 2nd argument: a possitive integer (indicating the number of bits corresponding to the
+//					 integer part of the number, which is the part before the decimal point).
+//   - 3rd argument: a possitive integer (indicating the number of bits corresponding to the 
+//					 part of the number that goes after the decimal point).
+//
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+#include "FixedPoint.h"
 #include "InputParser.h"
 #include "Output.h"
 #include <iostream>
@@ -16,7 +40,6 @@ int main(int argc, char* argv[])
 #endif // DEBUG
 
 	PuntoFijo punto_fijo;
-
 	bool inputIsOk = InputParser(argc, argv, punto_fijo);
 
 	if (inputIsOk)
@@ -26,8 +49,6 @@ int main(int argc, char* argv[])
 		punto_fijo.setResolution();
 		punto_fijo.setRange();
 		showAnswer(punto_fijo.signado, punto_fijo.resolution, punto_fijo.range);
-		//showResolution(punto_fijo.resolution);
-		//showRange(punto_fijo.range);
 	}
 	else
 		showError();
