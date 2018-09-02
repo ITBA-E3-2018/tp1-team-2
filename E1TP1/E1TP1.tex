@@ -1,52 +1,55 @@
 \documentclass[a4paper,12pt]{report}
 \usepackage{graphicx}
 \usepackage{color} 
+\usepackage[dvipsnames]{xcolor}
+\colorlet{purple}{purple}
+
 \begin{document}
-\title{\color{magenta}Trabajo Practico $N^o 1$}
+\title{\color{magenta}\underline {Trabajo Practico $N^o 1$}}
 \author{Electronica III}
-\author{Grupo 2}
-\date{\today} %ver si dejar la de today o poner fecha fija que sea August 2018
+\author{\color{green}Group 2}
+\date{\color{blue}\today} %ver si dejar la de today o poner fecha fija que sea August 2018
 \pagenumbering{arabic}
 
 \maketitle
 
-\section{Excercise 1: Resolution and Range of a Fixed-Point Binary Representation}
+\section{\color{olive}Excercise 1: Resolution and Range of a Fixed-Point Binary Representation}
 
-\subsection{What is the Fixed-Point Binary Representation}
+\subsection{\color{purple}What is the Fixed-Point Binary Representation}
 A fixed-point number has an integer part and a fractional part separated by a decimal point with a fixed position, as shown below:
 $$ (Integer Part).(Fractional Part)$$
 The integer part is formed by $n$ bits and the fractional part is formed by $m$ bits.
 $$ (bit \#1\ \ \ bit \#2\ \ \ ...\ \ \ bit \#n).(bit \#1\ \ \ bit \#2\ \ \ ...\ \ \ bit \#m)$$
 
-\subsection{What is Resolution and Range}
-\subsubsection{Resolution}
+\subsection{\color{purple}What is Resolution and Range}
+\subsubsection{\color{red}Resolution}
 The resolution of a number using the fixed point representation is the smallest unit that can be handled with it.
-Given a fixed-point number with $m$ fractional bits, the resolution is $2^-m$.
-\subsubsection{Range}
+Given a fixed-point number with $m$ fractional bits, the resolution is $2^- $$^m$. %Importante! Ver acá como puse el 2 elevado a la -m, para futuras veces.
+\subsubsection{\color{red}Range}
 The range is the difference between the biggest value that can be obtained with the fixed-point representation of a number with $n$ bits in the integer part and with $m$ bits in the fractional part, and the smallest number that can be represented.
 %ver de poner la ecuacion matematica que permite obtener el range.
 
-\subsection{Making Use of this Program}
-\subsubsection{Input}
+\subsection{\color{purple}Making Use of this Program}
+\subsubsection{\color{orange}Input}
 Three arguments must be entered through Command Line, separated by one space:
 \begin{enumerate}
 \item  1 (indicating that the numeric representation of the binary number is signed) or 0 (indicating that the representation is unsigned).
 \item $n$: A possitive integer (indicating the number of bits corresponding to the integer part of the number, which is the part before the decimal point).
 \item  $m$: A possitive integer (indicating the number of bits corresponding to the fractional part of the number, which is the part after the decimal point).
 \end{enumerate}
-For example: "0 1 1"
+{\color{cyan}For example: "0 1 1"}
 
-\subsubsection{Output}
+\subsubsection{\color{orange}Output}
 The result of this program is the resolution and range of the number that has $n$ digits in the integer part and $m$ digits in the fractional part.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[scale=1]{ejemploOutput}
-\caption{Output corresponding to the input $"0\ 1\ 1"$.}
+\caption{\color{cyan}Output corresponding to the input $"0\ 1\ 1"$.}
 \label{image output}
 \end{figure}
 
-\subsection{Testing the Program}
+\subsection{\color{purple}Testing the Program}
 
 
 % beginners guide to latex:
