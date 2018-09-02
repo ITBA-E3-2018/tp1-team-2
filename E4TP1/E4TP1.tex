@@ -1,33 +1,9 @@
-\documentclass[english]{article}
-\usepackage[T1]{fontenc}
-\usepackage[latin9]{inputenc}
-\usepackage{geometry}
-\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm,headheight=2cm,headsep=2cm}
-\usepackage{float}
-\usepackage{graphicx}
 
-\makeatletter
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
-%% Because html converters don't know tabularnewline
-\providecommand{\tabularnewline}{\\}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
-\usepackage{babel}
-
-
-
-
-\usepackage{babel}
-
-\makeatother
-
-\usepackage{babel}
-\begin{document}
+%\begin{document}
 
 \section{Excercise 4}
 
-\begin{figure}[H]
+\begin{figure}[!] %cambie la H por un !
 \begin{centering}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
@@ -127,39 +103,39 @@ $f_{4}(x_{1};x_{2};x_{3};x_{4})=x_{4}$
 By trying to express those formulas in logic gates graphs, we got
 the following:
 
-\begin{figure}[H]
+\begin{figure}[!] %cambio la H por !
 \begin{centering}
-\includegraphics[scale=0.25]{images/1}
+\includegraphics[scale=0.25]{E4TP1/images/1}
 \par\end{centering}
 \caption{1st Bit's logic gates graph}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[!]%cambio la H por !
 \begin{centering}
-\includegraphics[scale=0.25]{images/2}
+\includegraphics[scale=0.25]{E4TP1/images/2}
 \par\end{centering}
 \caption{2nd Bit's logic gates graph}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[!] %cambio la H por !
 \begin{centering}
-\includegraphics[scale=0.25]{images/3}
+\includegraphics[scale=0.25]{E4TP1/images/3}
 \par\end{centering}
 \caption{3th Bit's logic gates graph}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[!]%cambio la H por !
 \begin{centering}
-\includegraphics[scale=0.25]{images/4}
+\includegraphics[scale=0.25]{E4TP1/images/4}
 \par\end{centering}
 \caption{4th Bit's logic gates graph}
 \end{figure}
 
 Finally, this logic was implemented on verilog as follows:
 
-\begin{figure}[H]
+\begin{figure}[!] %cambio la H por!
 \begin{centering}
-\includegraphics[scale=0.4]{images/5}
+\includegraphics[scale=0.4]{E4TP1/images/5}
 \par\end{centering}
 \caption{Verilog implementation}
 \end{figure}
@@ -167,11 +143,11 @@ Finally, this logic was implemented on verilog as follows:
 and, by testing the code with test.v, we have got the following output,
 confirming that the code was executed correctly.
 
-\begin{figure}[H]
+\begin{figure}[!]%cambio la H por!
 \begin{centering}
-\includegraphics[scale=0.4]{images/6}
+\includegraphics[scale=0.4]{E4TP1/images/6}
 \par\end{centering}
 \caption{Terminal's output}
 \end{figure}
 
-\end{document}
+%\end{document}
