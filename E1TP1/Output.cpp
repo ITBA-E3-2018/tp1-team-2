@@ -1,37 +1,50 @@
+
 #include "Output.h"
 
-
+////////////////////////////////// ItIsPossitiveInteger /////////////////////////////////////	
+//
+// This function prints an error message, meaning that the input argument weren't correct.
+//
+// The function receives:
+// * (nothing)
+//
+// The function returns:
+// * (nothing)
+//
+/////////////////////////////////////////////////////////////////////////////////////////////
 void showError(void)
 {
-	cout << "Error en los comandos ingresados."; cout << endl;
-	cout << "Recuerde que debe ingresar unicamente 3 argumentos:"; cout << endl; cout << endl;
-	cout << "Primer argumento: 1 (signado) o 0 (no signado)"; cout << endl;
-	cout << "Segundo argumento: cantidad de bits correspondientes a la parte entera de un número en binario, en punto fijo."; cout << endl;
-	cout << "					Debe ser un numero entero positivo."; cout << endl; cout << endl;
-	cout << "Tercer argumento: cantidad de bits correspondientes a la parte fraccionaria a de un número en binario, en punto fijo."; cout << endl;
-	cout << "					Debe ser un numero entero positivo."; cout << endl; cout << endl;
-	//VER si poner lo que sigue o darle la posibilidad a la persona de reingresar cosas
+	cout << "An error was detected in your input."; cout << endl;
+	cout << "Remember you must enter exactly three arguments:"; cout << endl; cout << endl;
+	cout << "First argument: 1 (signed) or 0 (unsigned)"; cout << endl;
+	cout << "Second argument: number of bits corresponding to the integer part of a fixed-point-binary-represented number."; cout << endl;
+	cout <<	"					(This means the ammount of digits that go before the decimal point of a fixed point number)."; cout << endl;
+	cout << "					You should enter a possitive and integer number."; cout << endl; cout << endl;
+	cout << "Third argument: number of bits corresponding to the fractional part of a fixed-point-binary-represented number."; cout << endl;
+	cout << "					(This means the ammount of digits that go after the decimal point of a fixed point number)."; cout << endl;
+	cout << "					You should enter a possitive and integer number."; cout << endl; cout << endl;
 	getchar();
 }
 
-void showResolution(double resolution)
-{
-	//cout.precision(5);
-	//std::cout << "Resolucion: " << fixed <<resolution << std::endl;
-	std::cout << "Resolucion: " << resolution << std::endl;
-}
-
-void showRange(double range)
-{
-	std::cout << "Rango: " << range << std::endl;
-}
-
+////////////////////////////////// ItIsPossitiveInteger /////////////////////////////////////	
+//
+// This function prints the resolution and range of a fixed-point-binary-represented number.
+//
+// The function receives:
+// * A boolean: 1 meaning signed and 0 meaning unsigned.
+// * A double: the resolution.
+// * A double: the range.
+//
+// The function returns:
+// * (nothing)
+//
+/////////////////////////////////////////////////////////////////////////////////////////////
 void showAnswer(bool signado, double resolution, double range)
 {
 	if (signado)
-		std::cout << "Interpretacion en signado:"<< std::endl << std::endl;
+		std::cout << "Signed interpretation:"<< std::endl << std::endl;
 	else
-		std::cout << "Interpretacion en No signado:" << std::endl << std::endl;
-	std::cout << "Resolucion: " << resolution << std::endl;
-	std::cout << "Rango: " << range << std::endl;
+		std::cout << "Unsigned interpretation:" << std::endl << std::endl;
+	std::cout << "Resolution: " << resolution << std::endl;
+	std::cout << "Range: " << range << std::endl;
 }
