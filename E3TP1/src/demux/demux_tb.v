@@ -34,8 +34,8 @@ initial begin
 end
 
 initial begin
-  $display("Input\tSelector\tOut_0\tOut_1\tOut_2\tOut_3");
-  $monitor("%b\t%d\t\t%d\t%d\t%d\t%d",data_in, data_select, o0,o1,o2,o3);
+  $display("Inp\tSel\tO_0\tO_1\tO_2\tO_3");
+  $monitor("%b\t%d\t%d\t%d\t%d\t%d",data_in, data_select, o0,o1,o2,o3);
 end
 
 endmodule

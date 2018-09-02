@@ -30,8 +30,8 @@ initial begin
 end
 
 initial begin
-  $display("Input value\tOutput\tValue");
-  $monitor("%b\t\t%b\t%d",data_in, data_out, data_out);
+  $display("Input\tOutput\tValue");
+  $monitor("%b\t%b\t%d",data_in, data_out, data_out);
 end
 
 endmodule
