@@ -1,7 +1,7 @@
 
 %\begin{document}
 
-\section{Excercise 4}
+\section{\color{olive}Excercise 4}
 
 \begin{figure}[!] %cambie la H por un !
 \begin{centering}
@@ -44,11 +44,10 @@ $x_{1}$  & $x_{2}$  & $x_{3}$  & $x_{4}$  & $f_{1}$  & $f_{2}$  & $f_{3}$  & $f_
 \hline
 \end{tabular}
 \par\end{centering}
-\caption{Two's Complement truth table for 4 bits}
+\caption{\color{cyan}Two's Complement truth table for 4 bits}
 \end{figure}
 
-If we write every signle input bit according to the minterms, we have
-left the following equations:
+If we write every signle input bit according to the minterms, we get the following equations:
 \begin{center}
 $f_{1}(m_{i})=m_{1}+m_{2}+m_{3}+m_{4}+m_{5}+m_{6}+m_{7}+m_{8}$
 \par\end{center}
@@ -65,7 +64,7 @@ $f_{3}(m_{i})=m_{1}+m_{2}+m_{5}+m_{6}+m_{9}+m_{10}+m_{13}+m_{14}$
 $f_{4}(m_{i})=m_{1}+m_{3}+m_{5}+m_{7}+m_{9}+m_{11}+m_{13}+m_{15}$
 \par\end{center}
 
-Replacing the values of each minterm, we have got the following:
+Replacing the values of each minterm, we get the following:
 \begin{center}
 $f_{1}(x_{1};x_{2};x_{3};x_{4})=\bar{x_{1}}\bar{x_{2}}\bar{x_{3}}x_{4}+\bar{x_{1}}\bar{x_{2}}x_{3}\bar{x_{4}}+\bar{x_{1}}\bar{x_{2}}x_{3}x_{4}+\bar{x_{1}}x_{2}\bar{x_{3}}\bar{x_{4}}+\bar{x_{1}}x_{2}\bar{x_{3}}x_{4}+\bar{x_{1}}x_{2}x_{3}\bar{x_{4}}+\bar{x_{1}}x_{2}x_{3}x_{4}+x_{1}\bar{x_{2}}\bar{x_{3}}\bar{x_{4}}$
 \par\end{center}
@@ -82,7 +81,7 @@ $f_{3}(x_{1};x_{2};x_{3};x_{4})=\bar{x_{1}}\bar{x_{2}}\bar{x_{3}}x_{4}+\bar{x_{1
 $f_{4}(x_{1};x_{2};x_{3};x_{4})=\bar{x_{1}}\bar{x_{2}}\bar{x_{3}}x_{4}+\bar{x_{1}}\bar{x_{2}}x_{3}x_{4}+\bar{x_{1}}x_{2}\bar{x_{3}}x_{4}+\bar{x_{1}}x_{2}x_{3}x_{4}+x_{1}\bar{x_{2}}\bar{x_{3}}x_{4}+x_{1}\bar{x_{2}}x_{3}x_{4}+x_{1}x_{2}\bar{x_{3}}x_{4}+x_{1}x_{2}x_{3}x_{4}$
 \par\end{center}
 
-So, by simplification methods and properties, we can achieve this
+By simplification methods and properties, we can achieve this
 four formulas to describe each output bit according to the input bits:
 \begin{center}
 $f_{1}(x_{1};x_{2};x_{3};x_{4})=x_{1}\bar{x_{2}}\bar{x_{3}}\bar{x_{4}}+\bar{x_{1}}(x_{2}+x_{3}+x_{4})$
@@ -100,35 +99,34 @@ $f_{3}(x_{1};x_{2};x_{3};x_{4})=x_{3}\bar{x_{4}}+\bar{x_{3}}x_{4}$
 $f_{4}(x_{1};x_{2};x_{3};x_{4})=x_{4}$
 \par\end{center}
 
-By trying to express those formulas in logic gates graphs, we got
-the following:
+The previous formulas can be represented in logic gates' graphs:
 
 \begin{figure}[!] %cambio la H por !
 \begin{centering}
 \includegraphics[scale=0.25]{E4TP1/images/1}
 \par\end{centering}
-\caption{1st Bit's logic gates graph}
+\caption{\color{cyan}1st Bit's logic gates graph}
 \end{figure}
 
 \begin{figure}[!]%cambio la H por !
 \begin{centering}
 \includegraphics[scale=0.25]{E4TP1/images/2}
 \par\end{centering}
-\caption{2nd Bit's logic gates graph}
+\caption{\color{cyan}2nd Bit's logic gates graph}
 \end{figure}
 
 \begin{figure}[!] %cambio la H por !
 \begin{centering}
 \includegraphics[scale=0.25]{E4TP1/images/3}
 \par\end{centering}
-\caption{3th Bit's logic gates graph}
+\caption{\color{cyan}3rd Bit's logic gates graph}
 \end{figure}
 
 \begin{figure}[!]%cambio la H por !
 \begin{centering}
 \includegraphics[scale=0.25]{E4TP1/images/4}
 \par\end{centering}
-\caption{4th Bit's logic gates graph}
+\caption{\color{cyan}4th Bit's logic gates graph}
 \end{figure}
 
 Finally, this logic was implemented on verilog as follows:
@@ -137,17 +135,17 @@ Finally, this logic was implemented on verilog as follows:
 \begin{centering}
 \includegraphics[scale=0.4]{E4TP1/images/5}
 \par\end{centering}
-\caption{Verilog implementation}
+\caption{\color{cyan}Verilog implementation}
 \end{figure}
 
-and, by testing the code with test.v, we have got the following output,
+and, by testing the code with test.v, we have get the following output,
 confirming that the code was executed correctly.
 
 \begin{figure}[!]%cambio la H por!
 \begin{centering}
 \includegraphics[scale=0.4]{E4TP1/images/6}
 \par\end{centering}
-\caption{Terminal's output}
+\caption{\color{cyan}Terminal's output}
 \end{figure}
 
 %\end{document}
