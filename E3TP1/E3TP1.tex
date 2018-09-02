@@ -1,0 +1,65 @@
+\section{\color{olive}Excercise 3: Four-Entry Encoder and Demux using Verilog}
+Implement the following modules in Verilog:
+\begin {itemize}
+\item 4 inputs \textsc{encoder}
+\item 4 outputs \textsc{demux}
+\end {itemize}
+
+\subsection{\color{purple}4-Input ENCODER}
+\subsubsection{\color{orange}Description}
+An encoder is an Application-Specific Integrated Circuit (ASIC) that converts information. In this case it receives a signal from  a 4-bit input and returns the position of the Most Significant Bit that is currently on.
+\subsubsection{\color{orange}Code Implementation}
+The Code Implementation of both the Module and its testbench can be found in their respective directories.
+\subsubsection{\color{orange}Module Tests}
+Results of the Testbench:
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Input&Output&Value\\
+\hline
+0001&00&0\\
+0010&01&1\\
+0100&10&2\\
+1000&11&3\\
+0011&01&1\\
+0101&10&2\\
+1001&11&3\\
+0110&10&2\\
+1010&11&3\\
+1100&11&3\\
+\hline
+\end{tabular}
+\\\vspace{12pt}
+Table 1.1.3 \textsc{encoder} Testbench Results
+\end{center}
+
+\subsubsection{\color{orange}Conclusions}
+The module is working as expected, where it is taking only the Most Significant Bit as the value to be encoded.
+
+\subsection{\color{purple}4-output DEMUX}
+
+\subsubsection{\color{orange}Description}
+A DEMUX is an ASIC which receives an input signal and a selector signal. The selector signal determines through which output port the input signal is sent.
+
+\subsubsection{\color{orange}Code Implementation}
+The Code implementation for the \textsc{demux} can be found in its corresponding folder.
+
+\subsubsection{\color{orange}Module Tests}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+Input&Selector&Out\_0&Out\_1&Out\_2&Out\_3\\
+\hline
+1&0&1&0&0&0\\
+1&1&0&1&0&0\\
+1&2&0&0&1&0\\
+1&3&0&0&0&1\\
+\hline
+\end{tabular}
+\\\vspace{12pt}
+Table 1.2.3 \textsc{demux} Testbench Results
+\end{center}
+
+\subsubsection{\color{orange}Conclusions}
+The module works as expected.
