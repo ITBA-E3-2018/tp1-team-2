@@ -30,7 +30,7 @@ initial begin
 end
 
 initial begin
-  $display("Input\tOutput\tValue");
+  $display("Input\tOut\tVal");
   $monitor("%b\t%b\t%d",data_in, data_out, data_out);
 end
 
