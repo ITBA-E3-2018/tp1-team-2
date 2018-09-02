@@ -21,7 +21,15 @@
 
 
 
+
 \usepackage{babel}
+
+
+
+
+
+\usepackage{babel}
+
 
 
 
@@ -54,14 +62,15 @@ SUM, we had our SUBSTRACTION module. For the operations AND, OR, NOT,
 XOR we chosen to use the predefined modules provided by verilog and
 utilize them bitwise.
 
-\subsection{Definiciones}
+\subsection{Definitions}
 
-Esta unidad aritmetica l�gica se implemento con 2 acumuladores (que
-llamaremos A y B en este orden) de 4 bits cada uno, tres bits de operaciones,
-4 bits del acumulador de salida (que llamaremos Acumulador C) y un
-bit de carry, ordenados en el orden en que fueron mencionados. Para
-seleccionar que operacion se desea hacer, se deben encender los 3
-bits de operaciones de la siguiente manera:
+In this Aritmetic Logic Unit, we implemented with two accumulators
+(that we will call A and B), each one of four bits, three operational
+bits, four bits for the output accumulator (that we will call accumulator
+C) and one carry bit, ordered in the way they were mentioned.
+
+To select the operation you want to make, you should turn the three
+operational bits in the following way:
 
 \begin{table}[H]
 \begin{centering}
@@ -88,35 +97,34 @@ TWO'S COMPLEMENT  & 1  & 1  & 1\tabularnewline
 \hline 
 \end{tabular}
 \par\end{centering}
-\caption{Representacion de operaciones en los bits.}
+\caption{Representation of operational bits}
 \end{table}
 \begin{itemize}
-\item AND: Realiza una operacion AND bit a bit entre acumuladores A y B
-y la devuelve en el acumulador C, a su vez, el carry se devuelve en
-cero. 
-\item NOT: Realiza una operacion logica NOT bit a bit del acumulador A y
-devuelve la respuesta en el acumulador C, a su vez, el carry queda
-en cero. 
-\item OR: Realiza una operacion OR bit a bit entre acumuladores A y B y
-la devuelve en el acumulador C, a su vez, el carry se devuelve en
-cero. 
-\item XOR: Realiza una operacion XOR bit a bit entre acumuladores A y B
-y la devuelve en el acumulador C, a su vez, el carry se devuelve en
-cero. 
-\item SHIFT LEFT: Se encarga de mover cada bit del acumulador A un espacio
-a la derecha e inserta un cero al bit menos significativo, la respuesta
-la devuelve en el acumulador C y el carry valdra 0 o 1 dependiendo
-del bit mas significativo de A 
-\item SUM: Se encarga de hacer una suma numerica de los valores decimales
-de los acumuladores A y B y devuelve el resultado (en codigo binario)
-en el acumulador C. Dependiendo si es representable el resultado de
-la suma en un nibble se encendera o no el bit Carry. 
-\item SUBSTRACTION: Se encarga de hacer una resta numerica de los valores
-decimales de los acumuladores A y B y devuelve el resultado (en codigo
-binario) en el acumulador C. El carry se devuelve en 1. 
-\item TWO'S COMPLEMENT: Se encarga de hacer el complemento a 2 del acumulador
-A y devuelve el resultado en el acumulador C. El carry se devuelve
-en cero. 
+\item AND: Performs an AND operation bitwise between acummulators A and
+B and returns it on accumulator C, meanwhile, the carry bit is left
+to zero.
+\item NOT: Performs a logic NOT operation bitwise between acummulators A
+and B, and returns the answer in the accumulator C. The carry bit
+stays as zero
+\item OR: Performs a logic OR operation bitwise between accumulators A and
+B, and returns the answer in the accumulator C. The carry bit stays
+as zero.
+\item XOR: Performs a logic XOR operation bitwise between accumulators A
+and B, and returns the answer in the accumulator C. The carry bit
+stays as zero.
+\item SHIFT LEFT: It manages to move every bit in accumulator A, one space
+left, and insterts a logic zero to the less significant bit. The answer
+is given in the C acccumulator and the carry bit will become 0 or
+1 dependig on the most significant bit of A.
+\item SUM: Performs a numeric sum of the binary values of accumulator A
+and B and the answer is given in accumulator C. Depending on the overflow,
+the carry bit will become 1 or 0.
+\item SUBSTRACTION: Performs a numeric substraction of the binary values
+of accumulator A and B and the answer is given in accumulator C. The
+carry bit will become 1.
+\item TWO'S COMPLEMENT: Performs a two's complement of the binary value
+of accumulator A and the answer is given in accumulator C. The carry
+bit will become 0.
 \end{itemize}
 
 \end{document}
