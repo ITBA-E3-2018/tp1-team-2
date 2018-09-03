@@ -1,0 +1,87 @@
+
+
+\section{\color{olive}Excercise 6: ALU Implementation}
+
+For this exercise we were asked to implement a 4 bit Aritmetic Logic
+Unit (ALU). The operations we had to develop were SUM, SUBSTRACTION,
+AND, OR, NOT, XOR, two's complement and shift left. For this, we decided
+to create a module responsible of adding 2 bits, and as output, it
+returned 2 bits, one bit for the answer, and another for the carry
+bit. By using this module, we decided now, to create a secondary module,
+responsible for adding 3 bits. This decision gave us al lot of simplification
+in the development of the module SUM for 4 bits. As you can see in
+the code ``sum.v'' found in the folder src, we commented the previous
+development without the module sum3Bits, and the new development with
+the module sum3Bits.
+
+For the substaction, we decided to re-use the module created on exercise
+4 of two's complement, and utilizing it correctly with the module
+SUM, we had our SUBSTRACTION module. For the operations AND, OR, NOT,
+XOR we chosen to use the predefined modules provided by verilog and
+utilize them bitwise.
+
+\subsection{\color{purple}Definitions}
+
+In this Aritmetic Logic Unit, we implemented with two accumulators
+(that we will call A and B), each one of four bits, three operational
+bits, four bits for the output accumulator (that we will call accumulator
+C) and one carry bit, ordered in the way they were mentioned.
+
+To select the operation you want to make, you should turn the three
+operational bits in the following way:
+
+\begin{table}[h!]
+\begin{centering}
+\begin{tabular}{|c|c|c|c|}
+\hline 
+ & Bit 0  & Bit 1  & Bit 2\tabularnewline
+\hline 
+\hline 
+AND  & 0  & 0  & 0\tabularnewline
+\hline 
+NOT  & 0  & 0  & 1\tabularnewline
+\hline 
+OR  & 0  & 1  & 0\tabularnewline
+\hline 
+XOR  & 0  & 1  & 1\tabularnewline
+\hline 
+SHIFT LEFT  & 1  & 0  & 0\tabularnewline
+\hline 
+SUM  & 1  & 0  & 1\tabularnewline
+\hline 
+SUBSTRACTION  & 1  & 1  & 0\tabularnewline
+\hline 
+TWO'S COMPLEMENT  & 1  & 1  & 1\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+\caption{Representation of operational bits}
+\end{table}
+\begin{itemize}
+\item AND: Performs an AND operation bitwise between acummulators A and
+B and returns it on accumulator C, meanwhile, the carry bit is left
+to zero.
+\item NOT: Performs a logic NOT operation bitwise between acummulators A
+and B, and returns the answer in the accumulator C. The carry bit
+stays as zero
+\item OR: Performs a logic OR operation bitwise between accumulators A and
+B, and returns the answer in the accumulator C. The carry bit stays
+as zero.
+\item XOR: Performs a logic XOR operation bitwise between accumulators A
+and B, and returns the answer in the accumulator C. The carry bit
+stays as zero.
+\item SHIFT LEFT: It manages to move every bit in accumulator A, one space
+left, and insterts a logic zero to the less significant bit. The answer
+is given in the C acccumulator and the carry bit will become 0 or
+1 dependig on the most significant bit of A.
+\item SUM: Performs a numeric sum of the binary values of accumulator A
+and B and the answer is given in accumulator C. Depending on the overflow,
+the carry bit will become 1 or 0.
+\item SUBSTRACTION: Performs a numeric substraction of the binary values
+of accumulator A and B and the answer is given in accumulator C. The
+carry bit will become 1.
+\item TWO'S COMPLEMENT: Performs a two's complement of the binary value
+of accumulator A and the answer is given in accumulator C. The carry
+bit will become 0.
+\end{itemize}
+
