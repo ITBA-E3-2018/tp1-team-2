@@ -2,7 +2,7 @@
 # Makefile for LaTeX
 ##################################################################
 
-REPORT_FILE = Ej2
+REPORT_FILE = E2TP1
 OTHER = *~ *.aux *.dvi *.toc *.bbl *.blg *.gz *.out *.thm *.ps *.idx *.ilg *.ind *.log *.fdb_latexmk *.fls
 
 informe: $(REPORT_FILE).tex
