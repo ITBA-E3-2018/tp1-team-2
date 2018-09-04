@@ -4,7 +4,7 @@ Having the function in maxterms $$f_1 (A,B,C,D) = \prod\left(M_0, M_1 , M_5 , M_
 
     \subsection{\color{purple}Simplify: Boolean Algebra}
 
-    Using the Boolean algebra propertie $$(A+B).(A+\overline{B})=A~(1)$$ or $$(AB)+(A\overline{B})=A~(2)$$ the function could be simplify using (1): 
+    Using the Boolean algebra propertie $$(A+B).(A+\overline{B})=A~(1)$$ or $$(AB)+(A\overline{B})=A~(2)$$ the function could be simplify using (1):
     \begin{eqnarray*}
         f_1 (A,B,C,D) &= &(A+B+C+D).(A+B+C+\overline{D}).(A+\overline{B}+C+\overline{D}).(A+\overline{B}+\overline{C}+\overline{D}).\\
         &&(\overline{A}+B+C+D).(\overline{A}+B+\overline{C}+D).(\overline{A}+\overline{B}+\overline{C}+D).(\overline{A}+\overline{B}+\overline{C}+\overline{D}) \\
@@ -19,7 +19,7 @@ Having the function in maxterms $$f_1 (A,B,C,D) = \prod\left(M_0, M_1 , M_5 , M_
 
     \subsection{\color{purple}Simplify: Karnaugh Map}
 
-    Karnaugh map is a easier way to simplify logic experesion when the functions are too complex or too large to handle, cause Karnaugh map gives a more representative view for a faster analisis for it to simplify. 
+    Karnaugh map is a easier way to simplify logic experesion when the functions are too complex or too large to handle, cause Karnaugh map gives a more representative view for a faster analisis for it to simplify.
 
     If the simplification is done with minterms, the groups should be of $1$, adding each group in case there is more than 1, and in each group the independent variables would be multiplied.
     \begin{center}
@@ -29,7 +29,7 @@ Having the function in maxterms $$f_1 (A,B,C,D) = \prod\left(M_0, M_1 , M_5 , M_
             0,1,0,1,
             0,0,1,1,
             1,1,0,0,
-            1,0,1,0} 
+            1,0,1,0}
             \implicant{6}{14}{red}
             \implicant{3}{7}{green}
             \implicant{12}{8}{orange}
@@ -38,7 +38,7 @@ Having the function in maxterms $$f_1 (A,B,C,D) = \prod\left(M_0, M_1 , M_5 , M_
             %\implicantcostats{4}{14}{green}
         \end{Karnaugh}
     \end{center}
-    
+
     Now grouping the colour groups we get that the function in minterms would be:
     \begin{eqnarray*}
         f_2(A,B,C,D)&=&(A\overline{B}D)~(Red)\\
@@ -46,20 +46,20 @@ Having the function in maxterms $$f_1 (A,B,C,D) = \prod\left(M_0, M_1 , M_5 , M_
         &&+(\overline{A}\overline{B}C)~(Orange)\\
         &&+(AB\overline{C})~(Green)
     \end{eqnarray*}
- 
+
     The same method could be done with maxterms; grouping $O$, multipling groups in case there is more than 1, and in each group the independent variables would be added.
-    
+
     \subsection{\color{purple}Logic Circuit: AND, OR and NOT}
 
     Using the logic gates AND, OR and NOT the simplify version of the function could be represented in the figure below:
 
     \begin{figure}[htb!]
         \centering
-        \includegraphics[scale=0.45]{E2TP1/normallogic.png}
+        \includegraphics[scale=0.45]{../E2TP1/normallogic.png}
         \caption{\color{cyan}Logic circuit using AND, OR and NOT gates}
         \label{fig:normllogic}
     \end{figure}
-    
+
     \pagebreak
 
     \subsection{\color{purple}Logic Circuit: NAND}
@@ -68,7 +68,7 @@ Having the function in maxterms $$f_1 (A,B,C,D) = \prod\left(M_0, M_1 , M_5 , M_
 
     \begin{figure}[h!]
         \centering
-        \includegraphics[scale=0.45]{E2TP1/nandlogic.png}
+        \includegraphics[scale=0.45]{../E2TP1/nandlogic.png}
         \caption{\color{cyan}Logic circuit using NAND gates}
         \label{fig:nandlogic}
     \end{figure}
