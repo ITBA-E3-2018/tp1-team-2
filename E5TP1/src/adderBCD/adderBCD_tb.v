@@ -8,7 +8,7 @@ wire [3:0] out0, out1;
 wire flag;
 
 //Test Indexes
-reg [3:0] i,j;
+reg [4:0] i,j;
 
 //Connecting the ports adderBCD
 adderBCD adder_udt(
@@ -29,16 +29,17 @@ end
 initial begin
   in0 = 0;
   in1 = 0;
-  $display("In0\tIn1\t\tOut\t\tError");
-  $monitor("%d\t%d\t\t%d,%d\t%b", in0, in1, out1, out0, flag);
+  $display("In1\tIn0\t\tOut\t\tError");
+  $monitor("%d\t%d\t\t%d,%d\t%b", in1, in0, out1, out0, flag);
 end
 
 
 always begin
-for (i = 0; i<15 ; i = i+1) begin
-    #1 in0 = i;
-    for (j=0; j<15; j = j+1) begin
-      #1in1 = j;
+for (i = 0; i<16 ; i = i+1) begin
+    for (j=0; j<16; j = j+1) begin
+      #1 in1 = i[3:0];
+      in0 = j[3:0];
+      
     end
 end
 #20$finish;
