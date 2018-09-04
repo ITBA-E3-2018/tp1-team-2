@@ -21,4 +21,5 @@ wire [3:0] out1;
 
 assign out0 = in % 10;
 assign out1 = in / 10;
+
 endmodule

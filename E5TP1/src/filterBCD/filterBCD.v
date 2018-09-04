@@ -5,15 +5,19 @@ module filterBCD
     error   //Flag de error o invalido
 );
 
+//Defining Input
 input [3:0] in;
 
+//Defining Outputs
 output[3:0] out;
 output error;
 
+//Defining Variables
 wire [3:0] in;
 reg [3:0] out;
 reg error;
 
+//Code
 initial begin
   error = 0;
   out = 0;
@@ -28,7 +32,5 @@ always @ (in) begin
   end
   assign out = in;
 end
-
-
 
 endmodule
