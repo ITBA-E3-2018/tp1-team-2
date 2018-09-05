@@ -1,3 +1,4 @@
+BCD Filter Testbench
 Input	Output	Error
 0000  0	0000	0
 0001  1	0001	0
@@ -16,6 +17,7 @@ Input	Output	Error
 1110 14	1110	1
 
 VCD info: dumpfile sum4bit.vcd opened for output.
+4-bit adder Testbench
 In0	+	In1	=	Out
  0		 0		 0
  0		 1		 1
@@ -275,6 +277,7 @@ In0	+	In1	=	Out
 15		15		30
 
 VCD info: dumpfile decoderBCD.vcd opened for output.
+BCD Decoder Testbench
 In	In(bin)	Out1	Out0	BCD view
  0	00000	0000	0000	 0, 0
  1	00001	0000	0001	 0, 1

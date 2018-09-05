@@ -8,6 +8,7 @@ wire flag;
 
 initial begin
   in = 0;
+  $display("BCD Filter Testbench");
   $display("Input\tOutput\tError");
   $monitor("%b %d\t%b\t%b",in, in, out, flag);
 end

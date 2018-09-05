@@ -28,6 +28,7 @@ end
 initial begin
   in0 = 0;
   in1 = 0;
+  $display("BCD Adder Testbench");
   $display("In1\tIn0\t\tOut\t\tError");
   $monitor("%d\t%d\t\t%d,%d\t%b", in1, in0, out1, out0, flag);
 end

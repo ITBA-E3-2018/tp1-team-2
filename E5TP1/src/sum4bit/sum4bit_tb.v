@@ -23,6 +23,7 @@ end
 initial begin
   in0 = 0;
   in1 = 0;
+  $display("4-bit adder Testbench");
   $display("In0\t+\tIn1\t=\tOut");
   $monitor("%d\t\t%d\t\t%d", in0, in1, out);
 end

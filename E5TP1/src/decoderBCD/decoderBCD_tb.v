@@ -23,6 +23,7 @@ end
 
 initial begin
   in = 0;
+  $display("BCD Decoder Testbench");
   $display("In\tIn(bin)\tOut1\tOut0\tBCD view");
   $monitor("%d\t%b\t%b\t%b\t%d,%d", in, in, out1, out0, out1, out0);
 end
