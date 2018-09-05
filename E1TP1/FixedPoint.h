@@ -1,24 +1,113 @@
+/////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////// FixedPoint HEADER ////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
 #pragma once
 #include <vector>
 #include <string>
 //#define DEBUG
 using namespace std;
 
-class PuntoFijo
+class FixedPoint
 {
 public:
 	bool signado;
-	string parteEntera;
-	string parteFraccionaria;
-	float resolution;
-	double range;
+	string integerPart;
+	string fractionalPart;
+	long double resolution;
+	long double range;
 
-	void setParteEntera(char* secuencia);
-	void setParteFraccionaria(char*secuencia);
-	int toInt(string secuencia);
+	////////////////////////////////// Set Integer Part /////////////////////////////////////////	
+	//
+	// Setter function: sets the variable integerPart of the class FixedPoint with the received value.
+	//
+	// The function receives:
+	// * A string of chars: the integer part of a fixed point number.
+	//
+	// The function returns:
+	// * (nothing)
+	//
+	/////////////////////////////////////////////////////////////////////////////////////////////
+	void setIntegerPart(char* secuencia);
+
+	////////////////////////////////// Set Fractional Part ///////////////////////////////////////	
+	//
+	// Setter function: sets the variable fractionalPart of the class FixedPoint with the received value.
+	//
+	// The function receives:
+	// * A string of chars: the fractional part of a fixed point number.
+	//
+	// The function returns:
+	// * (nothing)
+	//
+	/////////////////////////////////////////////////////////////////////////////////////////////
+	void setFractionalPart(char*secuencia);
+
+	////////////////////////////////////////// To Int ////////////////////////////////////////////	
+	//
+	// This function converts a string of char numbers, to the integer corresponding to 
+	// that string of numbers.
+	//
+	// The function receives:
+	// * a numeric string
+	//
+	// The function returns:
+	// * int: with the value read from the string received.
+	//
+	/////////////////////////////////////////////////////////////////////////////////////////////
+	unsigned int toInt(string secuencia);
+
+	////////////////////////////////////// Set Resolution /////////////////////////////////////////	
+	//
+	// Setter function: sets the variable resolution of the class FixedPoint with
+	// resolution of the fixed-point-number's information from that same class.
+	//
+	// The function receives:
+	// * (nothing)
+	//
+	// The function returns:
+	// * (nothing)
+	//
+	/////////////////////////////////////////////////////////////////////////////////////////////
 	void setResolution();
+
+	//////////////////////////////////////// Set Range //////////////////////////////////////////	
+	//
+	// Setter function: sets the variable range of the class FixedPoint with
+	// range of the fixed-point-number's information from that same class.
+	//
+	// The function receives:
+	// * (nothing)
+	//
+	// The function returns:
+	// * (nothing)
+	//
+	/////////////////////////////////////////////////////////////////////////////////////////////
 	void setRange();
+
+	////////////////////////////////////// Get Resolution ////////////////////////////////////////	
+	//
+	// Getter function: gets/returns the variable resolution of the class FixedPoint.
+	//
+	// The function receives:
+	// * (nothing)
+	//
+	// The function returns:
+	// * Double: resolution
+	//
+	/////////////////////////////////////////////////////////////////////////////////////////////
 	double getResolution();
+
+	//////////////////////////////////////// Get Range ///////////////////////////////////////////	
+	//
+	// Getter function: gets/returns the variable range of the class FixedPoint.
+	//
+	// The function receives:
+	// * (nothing)
+	//
+	// The function returns:
+	// * Double: range
+	//
+	/////////////////////////////////////////////////////////////////////////////////////////////
 	double getRange();
 private:
 };

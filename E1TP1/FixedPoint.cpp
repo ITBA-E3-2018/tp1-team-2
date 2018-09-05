@@ -30,7 +30,7 @@ void FixedPoint::setFractionalPart(char* secuencia)
 ////////////////////////////////////// Set Resolution /////////////////////////////////////////	
 void FixedPoint::setResolution()
 {
-	resolution = 1.0 / pow(2, toInt(fractionalPart));
+	resolution = 1.0000000000000000000000000000000 / pow(2, toInt(fractionalPart));
 #ifdef DEBUG
 	std::cout << "RES: " << resolution << std::endl;
 #endif // DEBUG
@@ -49,18 +49,19 @@ void FixedPoint::setRange()
 	std::cout << "parte entera SIZE:" << toInt(parteEntera)<<std::endl;
 	std::cout << "parte fracc SIZE: " << toInt(parteFraccionaria)<< std::endl;
 #endif // DEBUG
-
+	unsigned int integerPartInInt = toInt(integerPart);
+	unsigned int fractionalPartInInt = toInt(fractionalPart);
 	if (signado)
 	{
-		for (i = 0; i < (toInt(integerPart)- 1); i++)
+		for (i = 0; i < (integerPartInInt - 1); i++)
 		{
 			max = max + pow(2,i);
 		}
-		for (i = 1; i <= toInt(fractionalPart); i++)
+		for (i = 1; i <= fractionalPartInInt; i++)
 		{
 			max = max + 1.0/pow(2,i);
 		}
-		min = -(pow(2, (toInt(integerPart) - 1)));
+		min = -(pow(2, (integerPartInInt - 1)));
 		 
 #ifdef DEBUG
 		std::cout << "max" << max << std::endl;
@@ -69,11 +70,11 @@ void FixedPoint::setRange()
 	}
 	else
 	{
-		for (i = 0; i < toInt(integerPart); i++)
+		for (i = 0; i < integerPartInInt; i++)
 		{
 			max = max + pow(2,i);
 		}
-		for (i = 0; i < toInt(fractionalPart); i++)
+		for (i = 0; i < fractionalPartInInt; i++)
 		{
 			max = max + 1.0/pow(2,i);
 		}
@@ -99,15 +100,15 @@ double FixedPoint::getRange()
 }
 
 ////////////////////////////////////////// To Int ////////////////////////////////////////////	
-int FixedPoint::toInt(string sequence)
+unsigned int FixedPoint::toInt(string sequence)
 {
-	int inInts = 0;
-	int i = 0;
+	unsigned int inInts = 0;
+	unsigned int i = 0;
 	while (sequence[i] != NULL)
 	{
 		if ((sequence[i] >= 48) && (sequence[i] <= 57))
 		{
-			inInts = inInts + (sequence[i] - 48);
+			inInts = (inInts * 10) + (sequence[i] - 48);
 		}
 		else
 		{
@@ -116,6 +117,10 @@ int FixedPoint::toInt(string sequence)
 		}
 			i++;
 	}
+//#ifdef DEBUG
+	std::cout << "inInts: " << inInts << std::endl;
+//#endif // DEBUG
+
 	return inInts;
 }
 
