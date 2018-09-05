@@ -26,9 +26,14 @@ bool InputParser(int argc, char* argv[], FixedPoint fixed_point_)
 				{
 					if (ItIsPossitiveInteger(argv[3]))			//and the third argument is a possitive integer,
 					{
-						fixed_point_.integerPart = argv[2];		//this information is saved in a fixed point's class and
-						fixed_point_.fractionalPart = argv[3];
-						return true;							//the input is OK.
+						if ((fixed_point_.toInt(argv[2]) <= 1000) && (fixed_point_.toInt(argv[3]) <= 1000))
+						{
+							fixed_point_.integerPart = argv[2];		//this information is saved in a fixed point's class and
+							fixed_point_.fractionalPart = argv[3];
+							return true;							//the input is OK.
+						}
+						else
+							return false;
 					}
 					else
 						return false;							
@@ -51,9 +56,14 @@ bool InputParser(int argc, char* argv[], FixedPoint fixed_point_)
 				{
 					if (ItIsPossitiveInteger(argv[3]))			//and the third argument is a possitive integer,
 					{
-						fixed_point_.integerPart = argv[2];		//this information is saved in a fixed point's class and
-						fixed_point_.fractionalPart = argv[3];
-						return true;							//the input is OK.
+						if ((fixed_point_.toInt(argv[2]) <= 1000) && (fixed_point_.toInt(argv[3]) <= 1000))
+						{
+							fixed_point_.integerPart = argv[2];		//this information is saved in a fixed point's class and
+							fixed_point_.fractionalPart = argv[3];
+							return true;							//the input is OK.
+						}
+						else
+							return false;
 					}
 					else
 						return false;
@@ -81,7 +91,7 @@ bool InputParser(int argc, char* argv[], FixedPoint fixed_point_)
 ////////////////////////////////// ItIsPossitiveInteger ////////////////////////////////////////	
 bool ItIsPossitiveInteger(char* sequence)
 {
-	unsigned long j = 0;
+	unsigned int j = 0;
 	while (sequence[j] != NULL)
 	{
 		j++;
@@ -102,30 +112,8 @@ bool ItIsPossitiveInteger(char* sequence)
 			i++;
 		}
 	}
-	//return true;											//If all the characters of the string are numbers,
+															//If all the characters of the string are numbers,
 															//it returns true because the sequence 
 															//represents a possitive integer.
-
-	//_______________________________
-	unsigned long inInts = 0;
-	unsigned int k = 0;
-	while (sequence[k] != NULL)
-	{
-		if ((sequence[k] >= 48) && (sequence[k] <= 57))
-		{
-			inInts = (inInts * 10) + (sequence[k] - 48);
-		}
-		else
-		{
-			inInts = 0;
-			return inInts;
-		}
-		k++;
-
-		if ((sequence[k + 1] != NULL) && (inInts == 4294967294)) //an unsigned long can go up to 4294967295
-		{
-			return false;
-		}
-	}
 	return true;
 }

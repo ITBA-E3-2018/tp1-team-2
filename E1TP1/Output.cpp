@@ -11,11 +11,11 @@ void showError(void)
 	cout << "Remember you must enter exactly three arguments:"; cout << endl; cout << endl;
 	cout << "First argument: 1 (signed) or 0 (unsigned)"; cout << endl;
 	cout << "Second argument: number of bits corresponding to the integer part of a fixed-point-binary-represented number."; cout << endl;
-	cout <<	"					(This means the ammount of digits that go before the decimal point of a fixed point number)."; cout << endl;
-	cout << "					You should enter a possitive and integer number."; cout << endl; cout << endl;
+	cout <<	"	(This means the ammount of digits that go before the decimal point of a fixed point number)."; cout << endl;
+	cout << "	You should enter a possitive and integer number, less or equal to 1000."; cout << endl; cout << endl;
 	cout << "Third argument: number of bits corresponding to the fractional part of a fixed-point-binary-represented number."; cout << endl;
-	cout << "					(This means the ammount of digits that go after the decimal point of a fixed point number)."; cout << endl;
-	cout << "					You should enter a possitive and integer number."; cout << endl;
+	cout << "	(This means the ammount of digits that go after the decimal point of a fixed point number)."; cout << endl;
+	cout << "	You should enter a possitive and integer number, less or equal to 1000."; cout << endl;
 	cout << "------------------------------------"; cout << endl; cout << endl;
 	getchar();
 }
