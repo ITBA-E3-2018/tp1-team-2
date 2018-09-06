@@ -4,13 +4,13 @@ Having the function in maxterms $$f_1 (A,B,C,D) = \prod\left(M_0, M_1 , M_5 , M_
 
     \subsection{\color{purple}Simplification by Boolean Algebra}
 
-    Using the Boolean algebra properties $$(A+B).(A+\overline{B})=A~(1)$$ or $$(AB)+(A\overline{B})=A~(2)$$ the function can be simplified using (1):
+    The function can be simplified by using the Boolean algebra property (1): $$(A+B).(A+\overline{B})=A~(1)$$ or $$(AB)+(A\overline{B})=A~(2)$$ the function can be simplified using (1):
     \begin{eqnarray*}
         f_1 (A,B,C,D) &= &(A+B+C+D).(A+B+C+\overline{D}).(A+\overline{B}+C+\overline{D}).(A+\overline{B}+\overline{C}+\overline{D}).\\
         &&(\overline{A}+B+C+D).(\overline{A}+B+\overline{C}+D).(\overline{A}+\overline{B}+\overline{C}+D).(\overline{A}+\overline{B}+\overline{C}+\overline{D}) \\
         &=&(A+B+C).(A+\overline{B}+\overline{D}).(\overline{A}+B+D).(\overline{A}+\overline{B}+\overline{C})
     \end{eqnarray*}
-    Which in minterms would be, using (2):
+    Using the Boolean algebra property (2):
     \begin{eqnarray*}
         f_2(A,B,C,D) &= &(\overline{A}\overline{B}C\overline{D})+(\overline{A}\overline{B}CD)+(\overline{A}B\overline{C}\overline{D})+(\overline{A}BC\overline{D})+\\
         &&(A\overline{B}\overline{C}D)+(A\overline{B}CD)+(AB\overline{C}\overline{D})+(AB\overline{C}D)\\
