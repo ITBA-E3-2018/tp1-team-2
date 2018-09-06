@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.9.1)  5 SEP 2018 23:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.9.1)  5 SEP 2018 23:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1417,11 +1417,11 @@ Package pdftex.def Info: ../E4TP1/images/6.png used on input line 15.
 ) [1 <../E4TP1/images/5.png> <../E4TP1/images/6.png>] (./ReportAssignment1.aux)
  ) 
 Here is how much of TeX's memory you used:
- 17392 strings out of 493304
- 305652 string characters out of 6139872
+ 17378 strings out of 493304
+ 305514 string characters out of 6139872
  436983 words of memory out of 5000000
  20220 multiletter control sequences out of 15000+600000
- 105513 words of font info for 220 fonts, out of 8000000 for 9000
+ 104571 words of font info for 209 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  67i,14n,71p,510b,864s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -1429,7 +1429,7 @@ e/texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/adobe/utopia/putr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/adobe/utopia/putri8a.pfb>
-Output written on ReportAssignment1.pdf (12 pages, 404727 bytes).
+Output written on ReportAssignment1.pdf (12 pages, 404629 bytes).
 PDF statistics:
  80 PDF objects out of 1000 (max. 8388607)
  45 compressed objects within 1 object stream
