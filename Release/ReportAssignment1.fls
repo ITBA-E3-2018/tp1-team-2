@@ -416,8 +416,6 @@ INPUT ../E5TP1/E5TP1.tex
 INPUT ../E5TP1/E5TP1.tex
 INPUT ../E6TP1/E6TP1.tex
 INPUT ../E6TP1/E6TP1.tex
-INPUT appendix.tex
-INPUT appendix.tex
 INPUT ReportAssignment1.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb
