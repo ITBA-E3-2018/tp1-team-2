@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.9.1)  5 SEP 2018 23:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.9.1)  5 SEP 2018 23:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1424,7 +1424,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Here is how much of TeX's memory you used:
  17386 strings out of 493304
  305422 string characters out of 6139872
- 437735 words of memory out of 5000000
+ 437845 words of memory out of 5000000
  20217 multiletter control sequences out of 15000+600000
  105513 words of font info for 220 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1434,7 +1434,7 @@ dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fou
 rier-mex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fourier/fourier-
 ms.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on ReportAssignment1.pdf (12 pages, 404212 bytes).
+Output written on ReportAssignment1.pdf (12 pages, 404230 bytes).
 PDF statistics:
  80 PDF objects out of 1000 (max. 8388607)
  45 compressed objects within 1 object stream
