@@ -21,7 +21,7 @@ Having the function in maxterms $$f_1 (A,B,C,D) = \prod\left(M_0, M_1 , M_5 , M_
 
     A Karnaugh map is an easier way to simplify logic expressions when the function is too complex or too large to handle, because the Karnaugh map gives a more representative view for a faster analysis.
 
-    If the simplification is done with minterms, the groups should be of ones and powers of 2, adding each group in case there is more than one, and in each group the independent variables would be multiplied.
+    If the simplification is done with minterms, groups are formed by 1's that are together. The ammount of ones that can be present in a group, is a power of two. Each group is represented in the equation by ANDS between the independent variables it contains (the ones that change). The groups are put together by using an OR between them.
     \begin{center}
         \begin{Karnaugh}
             %cada 4 es una fila, la col 3 es la 4ta columna y 3fila es la 4 fila
@@ -39,7 +39,7 @@ Having the function in maxterms $$f_1 (A,B,C,D) = \prod\left(M_0, M_1 , M_5 , M_
         \end{Karnaugh}
     \end{center}
 
-    Now grouping by colours we get that the function in minterms would be:
+    Now grouping by colours we get that the function expressed in minterms is:
     \begin{eqnarray*}
         f_2(A,B,C,D)&=&(A\overline{B}D)~(Red)\\
         &&+(\overline{A}B\overline{D})~(Blue)\\
@@ -47,7 +47,7 @@ Having the function in maxterms $$f_1 (A,B,C,D) = \prod\left(M_0, M_1 , M_5 , M_
         &&+(AB\overline{C})~(Green)
     \end{eqnarray*}
 
-    The same method could be done with maxterms; grouping zeroes in powers of 2, then multipling groups in case there is more than one, and in each group the independent variables would be added.
+    The same method can be done with maxterms; grouping zeroes (instead of ones) in powers of 2, making an AND between groups in case there is more than one, and each group is represented with an OR of its independent variables.
 
     \subsection{\color{purple}Logic Circuit: AND, OR and NOT}
 
