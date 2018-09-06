@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1536198827 "/home/victor/Documents/E3TP1/tp1-team-2/Release/ReportAssignment1.tex" "ReportAssignment1.pdf" "ReportAssignment1" 1536198828
-  "../E1TP1/E1TP1.tex" 1536198825 3153 929eeac30fb847abb1cae52966970b3f ""
+["pdflatex"] 1536200019 "/home/victor/Documents/E3TP1/tp1-team-2/Release/ReportAssignment1.tex" "ReportAssignment1.pdf" "ReportAssignment1" 1536200021
+  "../E1TP1/E1TP1.tex" 1536200018 3654 6e021ad8b6f41fc1b2756a0ad425d9ed ""
   "../E1TP1/ejemploOutput.PNG" 1535933961 5022 880ad056c086e95281199c33ef930564 ""
   "../E2TP1/E2TP1.tex" 1536167704 3887 b5f509385ea3c99aa649a105ce42748d ""
   "../E2TP1/nandlogic.png" 1535555596 27371 261f0d5b95e4a8d7539cdc00427e331d ""
@@ -202,7 +202,7 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1503347518 31075 dbb81bd39d798acf14cc121a151f7fe7 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1535812615 1346346 7f2b8b715a9ddb095afe3697a6ba02b5 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1535812568 3822873 7bb85e162c3b635d6fe6abcbd323b582 ""
-  "ReportAssignment1.aux" 1536198828 5403 070529ca9c5da453ee08ae9d92d10b99 ""
+  "ReportAssignment1.aux" 1536200021 5633 ceb2e58cbcb12b158b52bf4d2f8c2e94 ""
   "ReportAssignment1.tex" 1536198389 748 fb2813526b2824e7583ea7d9f2b89a07 ""
   "preamble.tex" 1536024549 9604 09e43cdb8c2ddda7c0e98256c95d17ca ""
   (generated)

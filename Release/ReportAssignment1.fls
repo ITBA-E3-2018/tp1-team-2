@@ -352,8 +352,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT ../E1TP1/ejemploOutput.PNG
 INPUT ../E1TP1/ejemploOutput.PNG
 INPUT ../E1TP1/ejemploOutput.PNG
-INPUT ../E2TP1/E2TP1.tex
-INPUT ../E2TP1/E2TP1.tex
+INPUT /usr/share/texlive/texmf-dist/tex/latex/fourier/ts1futs.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/fourier/ts1futs.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fourier/futr8c.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/fourier/futrc8t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fourier/futr8r.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fourier/fourier-alt.tfm
@@ -374,6 +375,10 @@ INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/fourier/futmii.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fourier/fourier-mlit.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fourier/fourier-ml.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fourier/futri8r.tfm
+INPUT ../E2TP1/E2TP1.tex
+INPUT ../E2TP1/E2TP1.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/fourier/futr8c.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fourier/fourier-orns.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/fourier/futr8t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fourier/fourier-alt.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/fourier/futsy.vf
@@ -387,11 +392,6 @@ INPUT ../E2TP1/nandlogic.png
 INPUT ../E2TP1/nandlogic.png
 INPUT ../E3TP1/E3TP1.tex
 INPUT ../E3TP1/E3TP1.tex
-INPUT /usr/share/texlive/texmf-dist/tex/latex/fourier/ts1futs.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/fourier/ts1futs.fd
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fourier/futr8c.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/fourier/futr8c.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fourier/fourier-orns.tfm
 INPUT ../E4TP1/E4TP1.tex
 INPUT ../E4TP1/E4TP1.tex
 INPUT ../E4TP1/images/1.png
