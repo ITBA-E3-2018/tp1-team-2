@@ -17,7 +17,6 @@ void showError(void)
 	cout << "	(This means the ammount of digits that go after the decimal point of a fixed point number)."; cout << endl;
 	cout << "	You should enter a possitive and integer number, less or equal to 1000."; cout << endl;
 	cout << "------------------------------------"; cout << endl; cout << endl;
-	getchar();
 }
 
 ///////////////////////////////////// show Answer //////////////////////////////////////////	

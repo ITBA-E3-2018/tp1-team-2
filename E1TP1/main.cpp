@@ -28,7 +28,7 @@
 #include <iostream>
 #include <string.h>
 
-#define DEBUG_IN_VISUAL_STUDIO
+//#define DEBUG_IN_VISUAL_STUDIO
 
 int main(int argc, char* argv[])
 {

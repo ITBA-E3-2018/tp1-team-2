@@ -10,8 +10,8 @@ void FixedPoint::setIntegerPart(char* secuencia)
 {
 	integerPart = secuencia;
 #ifdef DEBUG
-	std::cout << "parte Entera: " << parteEntera << std::endl;
-	std::cout << "parte Entera SIZE: " << toInt(parteEntera) << std::endl;
+	std::cout << "parte Entera: " << integerPart << std::endl;
+	std::cout << "parte Entera SIZE: " << toInt(integerPart) << std::endl;
 #endif // DEBUG
 }
 
@@ -20,17 +20,25 @@ void FixedPoint::setFractionalPart(char* secuencia)
 {
 	fractionalPart = secuencia;
 #ifdef DEBUG
-	std::cout << "parte Fraccionaria: " << parteFraccionaria << std::endl;
-	std::cout << "parte Fraccionaria SIZE: " << toInt(parteFraccionaria) << std::endl;
-	std::cout << "potencia: " << pow(2,toInt(parteFraccionaria)) << std::endl;
-	std::cout << "future resolution: " << 1.0 / pow(2,toInt(parteFraccionaria)) << std::endl;
+	std::cout << "parte Fraccionaria: " << fractionalPart << std::endl;
+	std::cout << "parte Fraccionaria SIZE: " << toInt(fractionalPart) << std::endl;
+	std::cout << "potencia: " << pow(2,toInt(fractionalPart)) << std::endl;
+	std::cout << "future resolution: " << 1.0 / pow(2,toInt(fractionalPart)) << std::endl;
 #endif // DEBUG
 }
 
 ////////////////////////////////////// Set Resolution /////////////////////////////////////////	
 void FixedPoint::setResolution()
 {
-	resolution = 1.0000000000000000000000000000000 / pow(2, toInt(fractionalPart));
+	if (toInt(fractionalPart) == 0)
+	{
+		if (toInt(integerPart) == 0)
+			resolution = 0;
+		else
+			resolution = 1;
+	}
+	else
+		resolution = 1.0000 / pow(2, toInt(fractionalPart));
 #ifdef DEBUG
 	std::cout << "RES: " << resolution << std::endl;
 #endif // DEBUG
@@ -46,22 +54,35 @@ void FixedPoint::setRange()
 
 #ifdef DEBUG
 	std::cout << "ENTRA a setRange" <<  std::endl;
-	std::cout << "parte entera SIZE:" << toInt(parteEntera)<<std::endl;
-	std::cout << "parte fracc SIZE: " << toInt(parteFraccionaria)<< std::endl;
+	std::cout << "parte entera SIZE:" << toInt(integerPart)<<std::endl;
+	std::cout << "parte fracc SIZE: " << toInt(fractionalPart)<< std::endl;
 #endif // DEBUG
 	unsigned int integerPartInInt = toInt(integerPart);
+#ifdef DEBUG
+	std::cout << "INTEGER PART IN INT: " << integerPartInInt << std::endl;
+#endif //DEBUG
 	unsigned int fractionalPartInInt = toInt(fractionalPart);
 	if (signado)
 	{
-		for (i = 0; i < (integerPartInInt - 1); i++)
+		if (integerPartInInt != 0)
 		{
-			max = max + pow(2,i);
+			for (i = 0; i < (integerPartInInt - 1); i++)
+			{
+				max = max + pow(2, i);
+			}	
 		}
 		for (i = 1; i <= fractionalPartInInt; i++)
 		{
 			max = max + 1.0/pow(2,i);
 		}
-		min = -(pow(2, (integerPartInInt - 1)));
+		if (integerPartInInt != 0)
+		{
+			min = -(pow(2, (integerPartInInt - 1)));
+		}
+		else if (fractionalPartInInt != 0)
+		{
+			min = -0.5;
+		}
 		 
 #ifdef DEBUG
 		std::cout << "max" << max << std::endl;
@@ -117,9 +138,9 @@ unsigned int FixedPoint::toInt(string sequence)
 		}
 			i++;
 	}
-//#ifdef DEBUG
+#ifdef DEBUG
 	std::cout << "inInts: " << inInts << std::endl;
-//#endif // DEBUG
+#endif // DEBUG
 
 	return inInts;
 }
