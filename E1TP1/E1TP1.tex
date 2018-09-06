@@ -30,16 +30,17 @@ The range is the difference between the biggest value that can be obtained with 
 
 \subsection{\color{purple}Making Use of this Program}
 \subsubsection{\color{orange}Input}
-Three arguments must be entered through Command Line, separated by one space:
+Three arguments must be entered through Command Line, separated by one or more spaces:
 \begin{enumerate}
 \item  1 (indicating that the numeric representation of the binary number is signed) or 0 (indicating that the representation is unsigned).
 \item $n$: A possitive integer (indicating the number of bits that correspond to the integer part of the number, which appears before the decimal point).
 \item  $m$: A possitive integer (indicating the number of bits that correspond to the fractional part of the number, which appears after the decimal point).
+Important: $n$ and $m$ are restricted to be less than or equal to 1000.
 \end{enumerate}
 {\color{cyan}For example: "0 1 1"}.
 
 \subsubsection{\color{orange}Output}
-The result of this program is the resolution and range of the number that has $n$ digits in the integer part and $m$ digits in the fractional part.
+The result of this program is the resolution and range of the number that has $n$ digits in the integer part and $m$ digits in the fractional part. If any of the input requirements is not respected, an error message is printed to the user.
 
 \begin{figure}[h!]
 \centering
